@@ -1,9 +1,9 @@
 "use client";
-
 import React from "react";
-import { useEffect } from "react";
-import { motion, useAnimationControls } from "framer-motion";
-import { init } from "next/dist/compiled/webpack/webpack";
+import { motion } from "framer-motion";
+
+let gridDelay = 0.3;
+let gridDuration = 0.75;
 
 const initial = {
   x: -5,
@@ -17,25 +17,25 @@ const animate = {
 
 const transition1 = {
   ease: "easeOut",
-  duration: 0.4,
+  duration: gridDuration,
 };
 
 const text1 = {
-  delay: 0.3,
+  delay: gridDelay,
   ease: "easeOut",
-  duration: 0.4,
+  duration: gridDuration,
 };
 
 const transition2 = {
-  delay: 0.6,
+  delay: gridDelay * 2,
   ease: "easeOut",
-  duration: 0.4,
+  duration: gridDuration,
 };
 
 const transition3 = {
-  delay: 0.9,
+  delay: gridDelay * 3.5,
   ease: "easeOut",
-  duration: 0.4,
+  duration: gridDuration,
 };
 
 const HeroSection = () => {
@@ -110,7 +110,7 @@ const HeroSection = () => {
         animate={animate}
         transition={text1}
       >
-        <h1 className="text-4xl font-semibold">Hey I'm Rylan</h1>
+        <h1 className="text-4xl font-semibold">Hey, I'm Rylan</h1>
         <p className="font-regular text-lg">
           Full-Stack Developer & UX Designer
         </p>
