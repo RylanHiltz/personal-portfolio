@@ -1,12 +1,14 @@
 import Image from "next/image";
 import HeroSection from "./components/HeroSection";
-import ShortAboutMe from "./components/ShortAboutMe";
+import FeaturedInfo from "./components/FeaturedInfo";
+import NavBar from "./components/NavBar";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       <HeroSection></HeroSection>
-      <ShortAboutMe></ShortAboutMe>
+      <FeaturedInfo></FeaturedInfo>
+      <NavBar></NavBar>
     </main>
   );
 }
