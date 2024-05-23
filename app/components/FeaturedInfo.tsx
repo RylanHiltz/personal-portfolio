@@ -2,8 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import "./styles.css";
 
-const InfoBar = () => {
+export default function InfoBar() {
   return (
     <div className="grid grid-cols-6 grid-rows-1 gap-5 my-20">
       <div className="col-span-3">
@@ -24,16 +25,16 @@ const InfoBar = () => {
           <ul className="flex flex-wrap gap-4">
             <li>
               <a
-                className=" text-[#CACACA] text-sm font-light pt-1"
+                className=" text-[#CACACA] text-sm font-light pt-1 hover-underline"
                 href="https://github.com/RylanHiltz"
                 target="_blank"
-              >
+               >
                 GitHub
               </a>
             </li>
             <li>
               <a
-                className=" text-[#CACACA] text-sm font-light pt-1"
+                className=" text-[#CACACA] text-sm font-light pt-1 hover-underline"
                 href=""
               >
                 LinkedIn
@@ -41,7 +42,7 @@ const InfoBar = () => {
             </li>
             <li>
               <a
-                className=" text-[#CACACA] text-sm font-light pt-1"
+                className=" text-[#CACACA] text-sm font-light pt-1 hover-underline"
                 href=""
               >
                 Dribbble
@@ -49,7 +50,7 @@ const InfoBar = () => {
             </li>
             <li>
               <a
-                className=" text-[#CACACA] text-sm font-light pt-1"
+                className=" text-[#CACACA] text-sm font-light pt-1 hover-underline"
                 href=""
               >
                 Awwwards
@@ -61,5 +62,3 @@ const InfoBar = () => {
     </div>
   );
 };
-
-export default InfoBar;
