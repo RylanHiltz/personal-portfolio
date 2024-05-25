@@ -1,8 +1,8 @@
 "use client";
-
 import React from "react";
 import { motion } from "framer-motion";
-import "./styles.css";
+
+import SocialButton from "./SocialButton";
 
 export default function InfoBar() {
   return (
@@ -24,41 +24,23 @@ export default function InfoBar() {
         <div>
           <ul className="flex flex-wrap gap-4">
             <li>
-              <a
-                className=" text-[#CACACA] text-sm font-light pt-1 hover-underline"
+              <SocialButton
+                name="GitHub"
                 href="https://github.com/RylanHiltz"
-                target="_blank"
-               >
-                GitHub
-              </a>
+              />
             </li>
             <li>
-              <a
-                className=" text-[#CACACA] text-sm font-light pt-1 hover-underline"
-                href=""
-              >
-                LinkedIn
-              </a>
+              <SocialButton name="LinkedIn" href="" />
             </li>
             <li>
-              <a
-                className=" text-[#CACACA] text-sm font-light pt-1 hover-underline"
-                href=""
-              >
-                Dribbble
-              </a>
+              <SocialButton name="Dribbble" href="" />
             </li>
             <li>
-              <a
-                className=" text-[#CACACA] text-sm font-light pt-1 hover-underline"
-                href=""
-              >
-                Awwwards
-              </a>
+              <SocialButton name="Awwwards" href="" />
             </li>
           </ul>
         </div>
       </div>
     </div>
   );
-};
+}
