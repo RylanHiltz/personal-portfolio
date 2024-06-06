@@ -38,24 +38,24 @@ const transition3 = {
   duration: gridDuration,
 };
 
-const HeroSection = () => {
+export default function HeroSection() {
   return (
     <section className="max-w-[566px]">
       <div className="grid grid-flow-col gap-3 w-grid1 pb-6">
         <motion.div
-          className="col-span-2 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-2 w-full h-5 rounded-sm bg-[#6D5D6E]"
           initial={initial}
           animate={animate}
           transition={transition1}
         ></motion.div>
         <motion.div
-          className="col-span-2 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-2 w-full h-5 rounded-sm bg-[#4F4557]"
           initial={initial}
           animate={animate}
           transition={transition2}
         ></motion.div>
         <motion.div
-          className="col-span-1 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-1 w-full h-5 rounded-sm bg-[#393646]"
           initial={initial}
           animate={animate}
           transition={transition3}
@@ -64,19 +64,19 @@ const HeroSection = () => {
 
       <div className="grid grid-flow-col gap-3 w-grid2 pb-6">
         <motion.div
-          className="col-span-5 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-5 w-full h-5 rounded-sm bg-[#393646]"
           initial={initial}
           animate={animate}
           transition={transition1}
         ></motion.div>
         <motion.div
-          className="col-span-1 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-1 w-full h-5 rounded-sm bg-[#6D5D6E]"
           initial={initial}
           animate={animate}
           transition={transition2}
         ></motion.div>
         <motion.div
-          className="col-span-5 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-5 w-full h-5 rounded-sm bg-[#4F4557]"
           initial={initial}
           animate={animate}
           transition={transition3}
@@ -85,19 +85,19 @@ const HeroSection = () => {
 
       <div className="grid grid-flow-col gap-3 w-grid3 pb-6 ml-5">
         <motion.div
-          className="col-span-3 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-3 w-full h-5 rounded-sm bg-[#4F4557]"
           initial={initial}
           animate={animate}
           transition={transition1}
         ></motion.div>
         <motion.div
-          className="col-span-4 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-4 w-full h-5 rounded-sm bg-[#6D5D6E]"
           initial={initial}
           animate={animate}
           transition={transition2}
         ></motion.div>
         <motion.div
-          className="col-span-3 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-3 w-full h-5 rounded-sm bg-[#4F4557]"
           initial={initial}
           animate={animate}
           transition={transition3}
@@ -106,7 +106,7 @@ const HeroSection = () => {
 
       <motion.div
         className="ml-5"
-        initial={initial}
+        initial={{ opacity: 0.001 }}
         animate={animate}
         transition={text1}
       >
@@ -116,21 +116,22 @@ const HeroSection = () => {
         </p>
       </motion.div>
 
+
       <div className="grid grid-flow-col gap-3 w-grid4 py-6 ml-5">
         <motion.div
-          className="col-span-1 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-1 w-full h-5 rounded-sm bg-[#6D5D6E]"
           initial={initial}
           animate={animate}
           transition={transition1}
         ></motion.div>
         <motion.div
-          className="col-span-3 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-3 w-full h-5 rounded-sm bg-[#4F4557]"
           initial={initial}
           animate={animate}
           transition={transition2}
         ></motion.div>
         <motion.div
-          className="col-span-3 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-3 w-full h-5 rounded-sm bg-[#393646]"
           initial={initial}
           animate={animate}
           transition={transition3}
@@ -139,19 +140,19 @@ const HeroSection = () => {
 
       <div className="grid grid-flow-col gap-3 w-grid5 pb-6">
         <motion.div
-          className="col-span-2 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-2 w-full h-5 rounded-sm bg-[#393646]"
           initial={initial}
           animate={animate}
           transition={transition1}
         ></motion.div>
         <motion.div
-          className="col-span-1 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-1 w-full h-5 rounded-sm bg-[#4F4557]"
           initial={initial}
           animate={animate}
           transition={transition2}
         ></motion.div>
         <motion.div
-          className="col-span-3 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-3 w-full h-5 rounded-sm bg-[#6D5D6E]"
           initial={initial}
           animate={animate}
           transition={transition3}
@@ -160,19 +161,19 @@ const HeroSection = () => {
 
       <div className="grid grid-flow-col gap-3 w-grid6 pb-6">
         <motion.div
-          className="col-span-2 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-2 w-full h-5 rounded-sm bg-[#4F4557]"
           initial={initial}
           animate={animate}
           transition={transition1}
         ></motion.div>
         <motion.div
-          className="col-span-4 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-4 w-full h-5 rounded-sm bg-[#6D5D6E]"
           initial={initial}
           animate={animate}
           transition={transition2}
         ></motion.div>
         <motion.div
-          className="col-span-2 w-full h-5 rounded-sm bg-[#D19A66]"
+          className="col-span-2 w-full h-5 rounded-sm bg-[#393646]"
           initial={initial}
           animate={animate}
           transition={transition3}
@@ -180,6 +181,4 @@ const HeroSection = () => {
       </div>
     </section>
   );
-};
-
-export default HeroSection;
+}
