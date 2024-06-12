@@ -54,15 +54,20 @@ function Project({ title, description, tags }: projectProps) {
         {/* Placeholder for tag section for tablet mobile responsiveness */}
         <div className="min-h-[40px] w-[400px] bg-[#333333] rounded-[5px] hidden max-1015px:block"></div>
       </div>
-      <div className="w-full h-full pl-10">
+      <div className="w-full max-h-[310px] pl-10 flex flex-col max-1015px:min-h-[310px] justify-around">
         <div className="flex w-full place-content-between font-medium text-lg">
           <p>{title}</p>
-          <p>Date Soon</p>
+          <p>2023</p>
         </div>
 
         {/* Description Paragraph */}
-        <div className="h-full">
-          <p className="pt-7 font-light max-1015px:h-full">{description}</p>
+        <p className="max-1015px:pt-7 font-light max-1015px:h-full">{description}</p>
+        <div className="flex place-content-between max-1015px:place-content-end">
+          {/* Placeholder for Desktop Tags */}
+          <div className="min-h-[40px] w-[300px] bg-[#333333] rounded-[5px] max-1015px:hidden mt-8">
+          </div>
+          {/* Placeholder for Github button and arrow to click for website */}
+          <div className="min-h-[40px] w-[75px] bg-[#333333] rounded-[5px] max-1015px:inline-block mt-8"></div>
         </div>
       </div>
     </section>
