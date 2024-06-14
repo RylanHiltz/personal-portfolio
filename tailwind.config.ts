@@ -20,7 +20,20 @@ const config: Config = {
         'grid4': '90%',
         'grid5': '100%',
         'grid6': '90%'
-      }
+      },
+      // TODO: create screen widths for mobile and tablet responsiveness 
+      screens: {
+        'mobile-s': '320px',
+        'mobile-m': '375px',
+        // mobile-lg 425px
+        'mobile-lg': '960px',
+        'tablet': '768px',
+        'laptop': '960px',
+
+        // Misc. sizing for responsive elements 
+        '875px': '887px',
+        '1015px': '1030px'
+      },
     },
   },
   plugins: [],
