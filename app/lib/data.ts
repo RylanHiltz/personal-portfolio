@@ -1,4 +1,5 @@
 import React from "react";
+import AestheticonsImg from "@/public/aestheticons.svg";
 
 export const links = [
   {
@@ -19,37 +20,67 @@ export const links = [
   },
 ] as const;
 
-// TODO: make list of project data for exporting [name, date, description, href] for each project
+// TODO: make list of project data for exporting [name, date, description, projectURL] for each project
 export const projectsData = [
   {
-    title: "Figma iPhone Icon Pack ",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
-    tags: ["React", "TypeScript", "Tailwind CSS"],
+    title: "Figma iPhone Icon Packs",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    tags: ["Figma", "UI/UX"],
+    date: "2022",
+    projectURL: "https://www.figma.com/design/lDJk2klmszuk3xHPHR4IXh/iPhone-Icons?node-id=0-1&t=cfGog6cp8gIXyNDx-1",
+    githubURL: "",
+    img: AestheticonsImg,
+    alt: "", 
   },
   {
-    title: "Project 2",
-    description: "this is a description for the 2nd project :O",
-    tags: ["React", "TypeScript", "Tailwind CSS"]
+    title: "My Personal Portfolio",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    tags: ["React", "TypeScript", "Tailwind CSS"],
+    date: "2024",
+    projectURL: "",
+    githubURL: "https://github.com/RylanHiltz/personal-portfolio",
+    img: "",
+    alt: "",
   },
   {
     title: "Project 3",
-    description: "this is a description for the 3rd project :)",
-    tags: ["React", "TypeScript", "Tailwind CSS"]
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    tags: ["React", "TypeScript", "Tailwind CSS"],
+    date: "2024",
+    projectURL: "",
+    githubURL: "",
+    img: "",
+    alt: "",
   },
   {
     title: "Project 4",
-    description: "this is a description for the 4th project :(",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     tags: ["React", "TypeScript", "Tailwind CSS"],
+    date: "2024",
+    projectURL: "",
+    githubURL: "",
+    img: "",
+    alt: "",
   },
   {
     title: "Project 5",
-    description: "this is a description for the 5th project :D",
-    tags: ["React", "TypeScript", "Tailwind CSS"]
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    tags: ["React", "TypeScript", "Tailwind CSS"],
+    date: "2024",
+    projectURL: "",
+    githubURL: "",
+    img: "",
+    alt: "",
   },
   {
     title: "Project 6",
     description: "this is a description for the 6th project :C",
-    tags: ["React", "TypeScript", "Tailwind CSS"]
+    tags: ["React", "TypeScript", "Tailwind CSS"],
+    date: "2024",
+    projectURL: "",
+    githubURL: "",
+    img: "",
+    alt: "",
   }
 ] as const;
 
