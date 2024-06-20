@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import { projectsData } from "@/app/lib/data";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Projects() {
-  
   // number of projects that are visible to the user
   const [visibleProjects, setVisibleProjects] = useState<number>(3);
 
@@ -30,6 +30,7 @@ export default function Projects() {
         ))}
       </div>
 
+      {/* TODO: Add animation for show more button "onClick" event [move down y, opacity 0, duration 0.2?] */}
       {/* show more button */}
       <div className="flex w-full justify-center items-center self-center">
         {visibleProjects < projectsData.length && (
@@ -57,7 +58,7 @@ function Project({
   img,
   alt,
 }: projectProps) {
-  // Const layers for hover animation
+  // Variants for 3D hover animation
   const layer1 = {
     rest: {
       x: 0,
@@ -95,24 +96,26 @@ function Project({
       },
     },
   };
+
+  // Variants for Github and project button animations
   const buttonVariants = {
     tap: {
       y: 2,
-      transition: { duration: 0.2 },
+      transition: { duration: 0.125 },
     },
     hover: {
       y: -3,
       scale: 1.05,
-      transition: { duration: 0.3 },
+      transition: { duration: 0.2 },
     },
   };
   const pathVariants = {
     tap: {
       fill: "#4F4557",
-      transition: { duration: 0.275 },
+      transition: { duration: 0.125 },
     },
     hover: {
-      fill: "#775A8D",
+      fill: "#735D85",
       transition: { duration: 0.275 },
     },
   };
@@ -136,8 +139,8 @@ function Project({
           >
             <div className="flex flex-col justify-end">
               {/* Placeholder div for image, can delete later or fit the image to the div */}
-              <div className="min-h-[250px] w-[400px] bg-[#333333] flex-none rounded-[5px] max-1015px:mb-5 max-875px:w-full">
-                <img className="object-cover" src="" alt="" />
+              <div className="min-h-[250px] w-[400px] flex-none max-1015px:mb-5 max-875px:w-full max-875px:h-min max-875px:min-h-[0px]">
+                <Image src={img} alt={alt} className="rounded-[7px] opacity-65"/>
               </div>
               {/* Laptop/Tablet Tags */}
               {/* TODO: turn off wrapping for tag itself but turn on wrapping for each specific tag (so it creates multiple lines if needed) */}
@@ -179,12 +182,13 @@ function Project({
                 {/* Github button and arrow to navigate to project */}
                 <div className="min-h-[30px] w-[75px] rounded-[5px] mt-8 flex gap-3 place-content-end">
                   {githubURL && (
-                    <button>
+                    <button aria-label="github">
                       <motion.a
                         href={githubURL}
                         target="_blank"
                         whileHover="hover"
                         whileTap="tap"
+                        aria-label="Navigate to project's Github repository"
                       >
                         <motion.svg
                           width="22"
@@ -202,12 +206,13 @@ function Project({
                       </motion.a>
                     </button>
                   )}
-                  <button>
+                  <button aria-label="project">
                     <motion.a
                       href={projectURL}
                       target="_blank"
                       whileHover="hover"
                       whileTap="tap"
+                      aria-label="Navigate to project"
                     >
                       <motion.svg
                         width="20"

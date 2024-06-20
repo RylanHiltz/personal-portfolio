@@ -1,5 +1,5 @@
 import React from "react";
-import AestheticonsImg from "@/public/aestheticons.svg";
+import AestheticonsImg from "@/public/aestheticonsimg.png";
 
 export const links = [
   {
@@ -20,7 +20,6 @@ export const links = [
   },
 ] as const;
 
-// TODO: make list of project data for exporting [name, date, description, projectURL] for each project
 export const projectsData = [
   {
     title: "Figma iPhone Icon Packs",
@@ -74,7 +73,7 @@ export const projectsData = [
   },
   {
     title: "Project 6",
-    description: "this is a description for the 6th project :C",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     tags: ["React", "TypeScript", "Tailwind CSS"],
     date: "2024",
     projectURL: "",
