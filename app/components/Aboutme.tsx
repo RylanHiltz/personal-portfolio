@@ -46,7 +46,7 @@ export default function Aboutme() {
             />
           </svg>
         </div>
-        <h2 className="text-2xl font-semibold py-1">Hey, I'm Rylan</h2>
+        <h2 className="text-2xl font-semibold py-1">Hey, I&apos;m Rylan</h2>
         <p className="text-[#D7D7D7] text-md font-extralight leading-8 text-start inline-block relative">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
