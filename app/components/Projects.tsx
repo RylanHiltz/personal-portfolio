@@ -30,7 +30,6 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* TODO: Add animation for show more button "onClick" event [move down y, opacity 0, duration 0.2?] */}
       {/* show more button */}
       <div className="flex w-full justify-center items-center self-center">
         {visibleProjects < projectsData.length && (
@@ -115,7 +114,7 @@ function Project({
       transition: { duration: 0.125 },
     },
     hover: {
-      fill: "#735D85",
+      fill: "#8D77A8",
       transition: { duration: 0.275 },
     },
   };
@@ -127,23 +126,22 @@ function Project({
         initial="rest"
         whileHover="hover"
         animate="rest"
-        className="z-1 w-full h-full min-h-[310px] bg-[#393646] rounded-[16px]"
+        className="z-1 w-full h-full min-h-[310px] bg-[#3E334C] rounded-[16px]"
       >
         <motion.div
           variants={layer2}
-          className="z-2 w-full h-full bg-[#4F4557] rounded-[16px]"
+          className="z-2 w-full h-full bg-[#4E3D5B] rounded-[16px]"
         >
           <motion.div
             variants={layer1}
-            className="z-3 flex w-full h-fit min-h-[310px] bg-[#1B1B1B] mb-[75px] mt-6 py-8 px-8 rounded-[15px]  max-875px:flex-col max-875px:max-w-[500px]"
+            className="z-3 flex w-full min-h-[310px] bg-[#1B1B1B] mb-[75px] mt-6 py-8 px-8 rounded-[15px] max-875px:flex-col max-875px:max-w-[500px] max-875px:h-auto"
           >
             <div className="flex flex-col justify-end">
-              {/* Placeholder div for image, can delete later or fit the image to the div */}
-              <div className="min-h-[250px] w-[400px] flex-none max-1015px:mb-5 max-875px:w-full max-875px:h-min max-875px:min-h-[0px]">
-                <Image src={img} alt={alt} className="rounded-[7px] opacity-65"/>
+              {/* Image for project section */}
+              <div className="min-h-[250px] w-[400px] flex-none max-1015px:mb-5 max-875px:w-full max-875px:h-min max-875px:min-h-[0em]">
+                <Image src={img} alt={alt} className="rounded-[7px] opacity-90"/>
               </div>
               {/* Laptop/Tablet Tags */}
-              {/* TODO: turn off wrapping for tag itself but turn on wrapping for each specific tag (so it creates multiple lines if needed) */}
               <div className="h-[30px] w-[400px] rounded-[5px] hidden max-1015px:block max-875px:hidden">
                 <ul className="h-[30px] flex gap-3">
                   {tags.map((tag, index) => (
@@ -157,22 +155,22 @@ function Project({
                 </ul>
               </div>
             </div>
-            <div className="w-full max-h-[310px] pl-10 flex flex-col max-1015px:min-h-[310px] justify-around max-875px:pl-0">
+            <div className="w-full pl-10 flex flex-col max-1015px:min-h-[310px] justify-around max-875px:pl-0 max-875px:h-fit">
               <div className="flex w-full place-content-between font-medium text-lg">
                 <p>{title}</p>
                 <p>{date}</p>
               </div>
 
               {/* Description Paragraph */}
-              <p className="max-1015px:pt-7 font-light max-1015px:h-full">
+              <p className="max-1015px:pt-7 font-light ">
                 {description}
               </p>
               <div className="flex place-content-between max-1015px:place-content-end max-875px:place-content-between">
                 {/* Desktop/Mobile Tags */}
-                <ul className="max-h-[30px] flex gap-3 max-1015px:hidden mt-8 max-875px:flex">
+                <ul className=" flex gap-3 max-1015px:hidden mt-8 max-875px:flex flex-wrap">
                   {tags.map((tag, index) => (
                     <li
-                      className="h-full w-fit bg-[#4B4B4B] px-2 py-1 rounded text-sm"
+                      className="h-full w-fit max-h-[30px] bg-[#5D5D5D] px-2 py-1 rounded text-sm text-nowrap"
                       key={index}
                     >
                       {tag}
@@ -180,7 +178,7 @@ function Project({
                   ))}
                 </ul>
                 {/* Github button and arrow to navigate to project */}
-                <div className="min-h-[30px] w-[75px] rounded-[5px] mt-8 flex gap-3 place-content-end">
+                <div className="min-h-[30px] w-[75px] rounded-[5px] mt-8 flex gap-3 place-content-end self-end">
                   {githubURL && (
                     <button aria-label="github">
                       <motion.a
