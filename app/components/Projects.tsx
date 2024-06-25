@@ -60,49 +60,43 @@ function Project({
 }: projectProps) {
 
   // Variants for 3D hover animation
-  const isMobile = window.innerWidth < 425;
-  let layer1 = {}
-  let layer2 = {}
-
-  if(!isMobile){
-    layer1 = {
-      rest: {
-        x: 0,
-        y: 0,
-        transition: {
-          duration: 0.3,
-          type: "tween",
-          ease: "easeIn",
-        },
+  const layer1 = {
+    rest: {
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        type: "tween",
+        ease: "easeIn",
       },
-      hover: {
-        x: -7.5,
-        y: -7,
-        transition: {
-          duration: 0.3,
-          ease: "easeOut",
-        },
+    },
+    hover: {
+      x: -7.5,
+      y: -7,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
       },
-    };
-    layer2 = {
-      rest: {
-        x: 0,
-        y: 0,
-        transition: {
-          duration: 0.3,
-          ease: "easeIn",
-        },
+    },
+  };
+  const layer2 = {
+    rest: {
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeIn",
       },
-      hover: {
-        x: -7,
-        y: -7,
-        transition: {
-          duration: 0.3,
-          ease: "easeOut",
-        },
+    },
+    hover: {
+      x: -7,
+      y: -7,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
       },
-    };
-  }
+    },
+  };
 
   // Variants for Github and project button animations
   const buttonVariants = {
