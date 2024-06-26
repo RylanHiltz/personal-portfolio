@@ -30,6 +30,7 @@ const config: Config = {
         'tablet': '768px',
         'laptop': '960px',
 
+        // TODO: fix names so names & sizing match
         // Misc. sizing for responsive elements 
         '875px': '887px',
         '1015px': '1030px'

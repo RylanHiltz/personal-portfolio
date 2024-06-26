@@ -13,14 +13,12 @@ export default function Projects() {
     setVisibleProjects((prevCount) => prevCount + 3);
   };
 
-
-  // TODO: Add fade in and up animation for when individual projects are scrolled into view
   return (
     <section>
       <div className="grid grid-cols-2 w-full mt-20 pb-10">
-        <h2 className="text-2xl font-extralight">Projects</h2>
-        <p className="text-2xl font-extralight justify-self-end">
-          2024 - Recent
+        <h2 className="text-2xl font-semibold">Projects</h2>
+        <p className="text-2xl font-semibold justify-self-end">
+          2022 - Recent
         </p>
       </div>
       <div className="flex flex-col max-875px:justify-center max-875px:align-center items-center">
@@ -121,6 +119,9 @@ function Project({
     },
   };
 
+  // TODO: Add fade in and up animation for when individual projects are scrolled into view
+
+  // TODO: Lower padding around project frame for mobile design and hide purple layers when screen width is > 425px
   return (
     <section className="w-full h-full max-875px:max-w-[500px]">
       {/* Layers for hover animation */}
@@ -138,13 +139,13 @@ function Project({
             variants={layer1}
             className="z-3 flex w-full min-h-[310px] bg-[#1B1B1B] mb-[75px] mt-6 py-8 px-8 rounded-[15px] max-875px:flex-col max-875px:max-w-[500px] max-875px:h-auto"
           >
-            <div className="flex flex-col justify-end">
+            <div className="flex flex-col ">
               {/* Image for project section */}
-              <div className="min-h-[250px] w-[400px] flex-none max-1015px:mb-5 max-875px:w-full max-875px:h-min max-875px:min-h-[0em]">
+              <div className="min-h-[250px] w-[400px] flex-none max-1015px:mb-5 max-875px:w-full max-875px:h-min max-875px:min-h-[0em] mb-auto">
                 <Image src={img} alt={alt} className="rounded-[7px] opacity-90"/>
               </div>
               {/* Laptop/Tablet Tags */}
-              <div className="h-[30px] w-[400px] rounded-[5px] hidden max-1015px:block max-875px:hidden">
+              <div className="h-[30px] w-[400px] rounded-[5px] hidden max-1015px:block max-875px:hidden mt-auto">
                 <ul className="h-[30px] flex gap-3">
                   {tags.map((tag, index) => (
                     <li
@@ -169,6 +170,7 @@ function Project({
               </p>
               <div className="flex place-content-between max-1015px:place-content-end max-875px:place-content-between">
                 {/* Desktop/Mobile Tags */}
+                {/* TODO: Reduce top margin for better visual when tags wrap */}
                 <ul className=" flex gap-3 max-1015px:hidden mt-8 max-875px:flex flex-wrap">
                   {tags.map((tag, index) => (
                     <li
