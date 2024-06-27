@@ -139,12 +139,11 @@ function Project({
         initial="rest"
         whileHover="hover"
         animate="rest"
-        // TODO: after fixing tailwind.config screen widths, add max-mobile-lg:bg-transparent
-        className="z-1 w-full h-full min-h-[310px] bg-[#3E334C] rounded-[16px]"
+        className="z-1 w-full h-full min-h-[310px] bg-[#3E334C] rounded-[16px] max-mobile-lg:bg-transparent"
       >
         <motion.div
           variants={layer2}
-          className="z-2 w-full h-full bg-[#4E3D5B] rounded-[16px]"
+          className="z-2 w-full h-full bg-[#4E3D5B] rounded-[16px] max-mobile-lg:bg-transparent"
         >
           <motion.div
             variants={layer1}
