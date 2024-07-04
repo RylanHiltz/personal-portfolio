@@ -38,7 +38,7 @@ export const projectsData = [
     date: "2024",
     projectURL: "",
     githubURL: "https://github.com/RylanHiltz/personal-portfolio",
-    img: "",
+    img: AestheticonsImg,
     alt: "",
   },
   {
@@ -48,38 +48,36 @@ export const projectsData = [
     date: "2024",
     projectURL: "",
     githubURL: "",
-    img: "",
+    img: AestheticonsImg,
     alt: "",
-  },
-  // {
-  //   title: "Project 4",
-  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
-  //   tags: ["React", "TypeScript", "Tailwind CSS"],
-  //   date: "2024",
-  //   projectURL: "",
-  //   githubURL: "",
-  //   img: "",
-  //   alt: "",
-  // },
-  // {
-  //   title: "Project 5",
-  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
-  //   tags: ["React", "TypeScript", "Tailwind CSS"],
-  //   date: "2024",
-  //   projectURL: "",
-  //   githubURL: "",
-  //   img: "",
-  //   alt: "",
-  // },
-  // {
-  //   title: "Project 6",
-  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
-  //   tags: ["React", "TypeScript", "Tailwind CSS"],
-  //   date: "2024",
-  //   projectURL: "",
-  //   githubURL: "",
-  //   img: "",
-  //   alt: "",
-  // }
+  }
 ] as const;
 
+export const skillsData = [
+  // Front-end skills
+  {
+    title: "Frontend",
+    languages: [
+      {
+        lang: "HTML",
+        progress: 95,
+      },
+      {
+        lang: "CSS",
+        progress: 90,
+      },
+      {
+        lang: "JS",
+        progress: 78,
+      },
+      {
+        lang: "TS",
+        progress: 85,
+      },
+      {
+        lang: "React",
+        progress: 74,
+      },
+    ],
+  },
+] as const;
