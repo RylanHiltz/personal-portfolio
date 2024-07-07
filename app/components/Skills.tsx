@@ -52,12 +52,12 @@ export default function Skills() {
         {/* Experience Section */}
         <section className="flex flex-col w-full mr-8">
           {experienceData.map((experience, index) => (
-            <div className="h-[200px] bg-[#212121] w-full rounded-[10px] px-5 py-5 mb-8 border border-[#3C3C3C] last:mb-0">
-              <div className="relative right-[74px] w-6 h-6 bg-[#9175B5] rounded-full top-3"></div>
-              <React.Fragment key={index}>
+            <React.Fragment key={index}>
+              <div className="h-[200px] bg-[#212121] w-full rounded-[10px] px-5 py-5 mb-8 border border-[#3C3C3C] last:mb-0">
+                <div className="relative right-[74px] w-6 h-6 bg-[#9175B5] rounded-full top-3"></div>
                 <ExperienceCard {...experience} />
-              </React.Fragment>
-            </div>
+              </div>
+            </React.Fragment>
           ))}
           {/* If experience cards are odd numbered, insert placeholder card */}
           {isOdd && (
@@ -70,8 +70,8 @@ export default function Skills() {
                 </h2>
                 <p className="max-w-[500px] mt-2 text-[#AEB1B7] font-light leading-7">
                   <em>
-                  &ldquo;The pages of tomorrow are blank; let&lsquo;s write something
-                    incredible.&rdquo;
+                    &ldquo;The pages of tomorrow are blank; let&lsquo;s write
+                    something incredible.&rdquo;
                   </em>
                   <strong className="font-medium"> Unknown</strong>
                 </p>
@@ -83,11 +83,11 @@ export default function Skills() {
         {/* Skills Section */}
         <section>
           {skillsData.map((skills, index) => (
-            <div className="h-[432px] bg-[#212121] w-[325px] rounded-[10px] px-5 py-5 border border-[#3C3C3C] mb-8 last:mb-0">
-              <React.Fragment key={index}>
+            <React.Fragment key={index}>
+              <div className="h-[432px] bg-[#212121] w-[325px] rounded-[10px] px-5 py-5 border border-[#3C3C3C] mb-8 last:mb-0">
                 <SkillsCard {...skills} />
-              </React.Fragment>
-            </div>
+              </div>
+            </React.Fragment>
           ))}
         </section>
       </div>
@@ -102,7 +102,9 @@ function ExperienceCard({ date, title, description }: experienceProps) {
     <div className="relative bottom-5">
       <h1 className="text-[#E9E9E9] font-medium">{date}</h1>
       <h2 className="text-[#E9E9E9] text-[18px] font-normal mt-2">{title}</h2>
-      <p className="max-w-[500px] mt-2 text-[#AEB1B7] font-light leading-7">{description}</p>
+      <p className="max-w-[500px] mt-2 text-[#AEB1B7] font-light leading-7">
+        {description}
+      </p>
     </div>
   );
 }
