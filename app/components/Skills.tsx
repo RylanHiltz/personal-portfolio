@@ -70,8 +70,8 @@ export default function Skills() {
                 </h2>
                 <p className="max-w-[500px] mt-2 text-[#AEB1B7] font-light leading-7">
                   <em>
-                    "The pages of tomorrow are blank; let's write something
-                    incredible."
+                  &ldquo;The pages of tomorrow are blank; let&lsquo;s write something
+                    incredible.&rdquo;
                   </em>
                   <strong className="font-medium"> Unknown</strong>
                 </p>
