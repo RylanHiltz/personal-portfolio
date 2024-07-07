@@ -1,9 +1,15 @@
+"use client";
 import React from "react";
 import PurpleButton from "./buttons/PurpleButton";
 import { motion } from "framer-motion";
 import { skillsData } from "../lib/data";
+import { experienceData } from "../lib/data";
 
 export default function Skills() {
+  // Checks if the number of cards is odd or even
+  const numOfExperience = experienceData.length;
+  const isOdd = numOfExperience % 2 !== 0;
+
   return (
     <div className="flex flex-col w-full h-full my-[10em]">
       <div className="w-full max-w-fit h-fit">
@@ -33,7 +39,7 @@ export default function Skills() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <div className="flex gap-3 mt-3">
+        <div className="flex gap-5 mt-3">
           <PurpleButton name="Contact Me" href=""></PurpleButton>
           <button>Download CV</button>
         </div>
@@ -41,44 +47,73 @@ export default function Skills() {
 
       {/* Timeline for experience section */}
       <div className="flex w-full mt-[4em]">
-        <div className="w-[3px] bg-[#404040] mr-10"></div>
+        <div className="w-[2px] bg-[#404040] mr-10"></div>
 
-        {/* TODO: setup proper experience mapping */}
+        {/* Experience Section */}
         <section className="flex flex-col w-full mr-8">
-          <div className="h-[200px] bg-[#212121] w-full rounded-[10px] px-5 py-5 mb-8">
-            Experience test
-          </div>
-          <div className="h-[200px] bg-[#212121] w-full rounded-[10px] px-5 py-5">
-            Experience test
-          </div>
+          {experienceData.map((experience, index) => (
+            <div className="h-[200px] bg-[#212121] w-full rounded-[10px] px-5 py-5 mb-8 border border-[#3C3C3C] last:mb-0">
+              <div className="relative right-[74px] w-6 h-6 bg-[#9175B5] rounded-full top-3"></div>
+              <React.Fragment key={index}>
+                <ExperienceCard {...experience} />
+              </React.Fragment>
+            </div>
+          ))}
+          {/* If experience cards are odd numbered, insert placeholder card */}
+          {isOdd && (
+            <div className="h-[200px] bg-[#212121] w-full rounded-[10px] px-5 py-5 mb-8 border border-[#3C3C3C] last:mb-0">
+              <div className="relative right-[74px] w-6 h-6 bg-[#9175B5] rounded-full top-3"></div>
+              <div className="relative bottom-5">
+                <h1 className="text-[#E9E9E9] font-medium">Present-Future</h1>
+                <h2 className="text-[#E9E9E9] text-[18px] font-normal mt-2">
+                  ???
+                </h2>
+                <p className="max-w-[500px] mt-2 text-[#AEB1B7] font-light leading-7">
+                  <em>
+                    "The pages of tomorrow are blank; let's write something
+                    incredible."
+                  </em>
+                  <strong className="font-medium"> Unknown</strong>
+                </p>
+              </div>
+            </div>
+          )}
         </section>
 
-        {/* TODO: setup proper skills section mapping */}
+        {/* Skills Section */}
         <section>
-          <div className="h-[432px] bg-[#212121] w-[325px] rounded-[10px] px-5 py-5 border border-[#3C3C3C]">
-            {/* Skills Test */}
-            {skillsData.map((skills, index) => (
+          {skillsData.map((skills, index) => (
+            <div className="h-[432px] bg-[#212121] w-[325px] rounded-[10px] px-5 py-5 border border-[#3C3C3C] mb-8 last:mb-0">
               <React.Fragment key={index}>
                 <SkillsCard {...skills} />
-              </React.Fragment> 
-            ))}
-          </div>
+              </React.Fragment>
+            </div>
+          ))}
         </section>
       </div>
     </div>
   );
 }
 
-// function ExperienceCard() {}
+type experienceProps = (typeof experienceData)[number];
+
+function ExperienceCard({ date, title, description }: experienceProps) {
+  return (
+    <div className="relative bottom-5">
+      <h1 className="text-[#E9E9E9] font-medium">{date}</h1>
+      <h2 className="text-[#E9E9E9] text-[18px] font-normal mt-2">{title}</h2>
+      <p className="max-w-[500px] mt-2 text-[#AEB1B7] font-light leading-7">{description}</p>
+    </div>
+  );
+}
 
 type skillsProps = (typeof skillsData)[number];
 
-function SkillsCard({ title, languages }: skillsProps) {
+function SkillsCard({ title, languages, skills }: skillsProps) {
   return (
-    <div>
+    <div className="h-full flex flex-col">
       <h1>{title} Languages</h1>
-      <div className="w-full">
-        {/* Access languages array data here */}
+      <div className="w-full flex-grow">
         <div className="mt-3">
           {languages.map((language, index) => (
             <div key={index} className="flex justify-end my-1.5">
@@ -86,11 +121,24 @@ function SkillsCard({ title, languages }: skillsProps) {
                 <p className="text-[#BFBFBF]">{language.lang}</p>
               </div>
 
-              <div className="h-3.5 w-3/5 bg-[#323232] rounded-full ml-3 mt-1">
-                <div
+              <div className="h-3.5 w-3/5 bg-[#323232] rounded-full ml-3 mt-1 bg-clip-border">
+                <motion.div
                   className="h-3.5 bg-[#9175B5] rounded-full"
                   style={{ width: `${language.progress}%` }}
-                ></div>
+                  // TEST ANIMATION FOR PROGRESS BAR
+                  // initial={{
+                  //   scaleX: 0,
+                  //   scaleY: 1,
+                  //   borderRadius: "9999px",
+                  //   x: 1.6,
+                  // }}
+                  // animate={{ scaleX: 1, originX: 0, x: 0 }}
+                  // transition={{
+                  //   delay: 0.4 * index,
+                  //   ease: "easeOut",
+                  //   duration: 0.4,
+                  // }}
+                ></motion.div>
               </div>
 
               <div className="ml-2">
@@ -100,8 +148,8 @@ function SkillsCard({ title, languages }: skillsProps) {
           ))}
         </div>
       </div>
-      <h1 className="mt-7">{title} Skills</h1>
-      <p className=" text-[#AEB1B7] font-light mt-1 leading-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+      <h1 className="mt-auto">{title} Skills</h1>
+      <p className="text-[#AEB1B7] font-light mt-1 leading-7 mb-3">{skills}</p>
     </div>
   );
 }

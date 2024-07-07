@@ -23,17 +23,20 @@ export const links = [
 export const projectsData = [
   {
     title: "Figma iPhone Icon Packs",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     tags: ["Figma", "UI/UX"],
     date: "2022",
-    projectURL: "https://www.figma.com/design/lDJk2klmszuk3xHPHR4IXh/iPhone-Icons?node-id=0-1&t=cfGog6cp8gIXyNDx-1",
+    projectURL:
+      "https://www.figma.com/design/lDJk2klmszuk3xHPHR4IXh/iPhone-Icons?node-id=0-1&t=cfGog6cp8gIXyNDx-1",
     githubURL: "",
     img: AestheticonsImg,
-    alt: "", 
+    alt: "",
   },
   {
     title: "My Personal Portfolio",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     tags: ["React", "TypeScript", "Tailwind", "Framer-Motion"],
     date: "2024",
     projectURL: "",
@@ -43,19 +46,19 @@ export const projectsData = [
   },
   {
     title: "Project 3",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     tags: ["React", "TypeScript", "Tailwind CSS"],
     date: "2024",
     projectURL: "",
     githubURL: "",
     img: AestheticonsImg,
     alt: "",
-  }
+  },
 ] as const;
 
 export const skillsData = [
-  // Front-end skills
-  {
+  { // Frontend skills
     title: "Frontend",
     languages: [
       {
@@ -79,5 +82,53 @@ export const skillsData = [
         progress: 74,
       },
     ],
+    skills:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+  },
+  { // Backend skills
+    title: "Backend",
+    languages: [
+      {
+        lang: "Java",
+        progress: 78,
+      },
+      {
+        lang: "Python",
+        progress: 70,
+      },
+      {
+        lang: "SQL",
+        progress: 35,
+      },
+      {
+        lang: "C#",
+        progress: 88,
+      },
+      {
+        lang: "PHP",
+        progress: 74,
+      },
+    ],
+    skills:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation dolor. ",
   },
 ] as const;
+
+
+export const experienceData = [
+  {
+    date: "2018-2022",
+    title: "Graduated From Eastview Secondary School",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    date: "2022-2026",
+    title: "Studying At Trent University",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    date: "2024-Present",
+    title: "Studying At Trent University",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+];
