@@ -32,7 +32,10 @@ const config: Config = {
         // TODO: fix names so names & sizing match
         // Misc. sizing for responsive elements 
         '875px': '887px',
-        '1015px': '1030px'
+        '1030px': '1030px',
+        '920px': '920px',
+        '650px': '700px',
+        '585px': '585px',
       },
     },
   },
