@@ -45,46 +45,51 @@ export default function Skills() {
         </div>
       </div>
 
-      {/* Timeline for experience section */}
-      <div className="flex w-full mt-[4em]">
-        <div className="w-[2px] bg-[#404040] mr-10"></div>
-
+      {/* Div that holds [Timeline, Experience, & Skills] */}
+      <div className="flex w-full mt-[4em] max-920px:flex-col-reverse max-920px:gap-8">
+        
         {/* Experience Section */}
-        <section className="flex flex-col w-full mr-8">
-          {experienceData.map((experience, index) => (
-            <React.Fragment key={index}>
+        <div className="w-full flex">
+          {/* Timeline for experience section */}
+          <div className="w-[1px] bg-[#404040] mr-10"></div>
+
+          {/* Experience Cards */}
+          <section className="flex flex-col w-full mr-8 max-920px:mr-0">
+            {experienceData.map((experience, index) => (
+              <React.Fragment key={index}>
+                <div className="h-[200px] bg-[#212121] w-full rounded-[10px] px-5 py-5 mb-8 border border-[#3C3C3C] last:mb-0 max-650px:h-min">
+                  <div className="relative right-[70px] w-[18px] h-[18px] bg-[#9175B5] rounded-full top-3"></div>
+                  <ExperienceCard {...experience} />
+                </div>
+              </React.Fragment>
+            ))}
+            {/* If experience cards are odd numbered, insert placeholder card */}
+            {isOdd && (
               <div className="h-[200px] bg-[#212121] w-full rounded-[10px] px-5 py-5 mb-8 border border-[#3C3C3C] last:mb-0">
-                <div className="relative right-[74px] w-6 h-6 bg-[#9175B5] rounded-full top-3"></div>
-                <ExperienceCard {...experience} />
+                <div className="relative right-[70px] w-[18px] h-[18px] bg-[#9175B5] rounded-full top-3"></div>
+                <div className="relative bottom-5">
+                  <h1 className="text-[#E9E9E9] font-medium">Present-Future</h1>
+                  <h2 className="text-[#E9E9E9] text-[18px] font-normal mt-2">
+                    ???
+                  </h2>
+                  <p className="max-w-[500px] mt-2 text-[#AEB1B7] font-light leading-7">
+                    <em>
+                      &ldquo;The pages of tomorrow are blank; let&lsquo;s write
+                      something incredible.&rdquo;
+                    </em>
+                    <strong className="font-medium"> Unknown</strong>
+                  </p>
+                </div>
               </div>
-            </React.Fragment>
-          ))}
-          {/* If experience cards are odd numbered, insert placeholder card */}
-          {isOdd && (
-            <div className="h-[200px] bg-[#212121] w-full rounded-[10px] px-5 py-5 mb-8 border border-[#3C3C3C] last:mb-0">
-              <div className="relative right-[74px] w-6 h-6 bg-[#9175B5] rounded-full top-3"></div>
-              <div className="relative bottom-5">
-                <h1 className="text-[#E9E9E9] font-medium">Present-Future</h1>
-                <h2 className="text-[#E9E9E9] text-[18px] font-normal mt-2">
-                  ???
-                </h2>
-                <p className="max-w-[500px] mt-2 text-[#AEB1B7] font-light leading-7">
-                  <em>
-                    &ldquo;The pages of tomorrow are blank; let&lsquo;s write
-                    something incredible.&rdquo;
-                  </em>
-                  <strong className="font-medium"> Unknown</strong>
-                </p>
-              </div>
-            </div>
-          )}
-        </section>
+            )}
+          </section>
+        </div>
 
         {/* Skills Section */}
-        <section>
+        <section className="max-650px:flex max-650px:flex-row max-650px:gap-5 max-585px:flex-col max-585px:gap-0">
           {skillsData.map((skills, index) => (
             <React.Fragment key={index}>
-              <div className="h-[432px] bg-[#212121] w-[325px] rounded-[10px] px-5 py-5 border border-[#3C3C3C] mb-8 last:mb-0">
+              <div className="h-[432px] bg-[#212121] w-[325px] rounded-[10px] px-5 py-5 border border-[#3C3C3C] mb-8 last:mb-0 max-920px:w-full max-920px:h-min">
                 <SkillsCard {...skills} />
               </div>
             </React.Fragment>
@@ -102,7 +107,7 @@ function ExperienceCard({ date, title, description }: experienceProps) {
     <div className="relative bottom-5">
       <h1 className="text-[#E9E9E9] font-medium">{date}</h1>
       <h2 className="text-[#E9E9E9] text-[18px] font-normal mt-2">{title}</h2>
-      <p className="max-w-[500px] mt-2 text-[#AEB1B7] font-light leading-7">
+      <p className="max-w-[500px] mt-2 text-[#AEB1B7] font-light leading-7 max-920px:max-w-full">
         {description}
       </p>
     </div>
@@ -113,45 +118,60 @@ type skillsProps = (typeof skillsData)[number];
 
 function SkillsCard({ title, languages, skills }: skillsProps) {
   return (
-    <div className="h-full flex flex-col">
-      <h1>{title} Languages</h1>
-      <div className="w-full flex-grow">
-        <div className="mt-3">
-          {languages.map((language, index) => (
-            <div key={index} className="flex justify-end my-1.5">
-              <div>
-                <p className="text-[#BFBFBF]">{language.lang}</p>
-              </div>
+    <div className="h-full flex flex-col max-920px:flex-row max-920px:gap-[3em] max-650px:flex-col max-650px:gap-0">
+      <div>
+        <div className="w-full h-full">
+          {/* Div for all progress bars */}
+          <div className="flex flex-col w-full min-w-[275px] max-920px:h-full max-650px:min-w-[50px]">
+            <h1>{title} Languages</h1>
+            <div className="mt-3 max-920px:flex max-920px:flex-col max-920px:justify-evenly max-920px:h-full">
+              {languages.map((language, index) => (
+                <div
+                  key={index}
+                  className="flex justify-end my-1.5 max-920px:my-0.5 max-650px:my-1"
+                >
+                  <div>
+                    <p className="flex justify-end text-[#BFBFBF] max-920px:w-[55px]">
+                      {language.lang}
+                    </p>
+                  </div>
+                  {/* Progress Bars */}
+                  <div className="h-3.5 w-full max-w-[175px] bg-[#323232] rounded-full ml-3 mt-1 bg-clip-border max-650px:max-w-full">
+                    <motion.div
+                      className="h-3.5 bg-[#9175B5] rounded-full"
+                      style={{ width: `${language.progress}%` }}
+                    ></motion.div>
+                  </div>
 
-              <div className="h-3.5 w-3/5 bg-[#323232] rounded-full ml-3 mt-1 bg-clip-border">
-                <motion.div
-                  className="h-3.5 bg-[#9175B5] rounded-full"
-                  style={{ width: `${language.progress}%` }}
-                  // TEST ANIMATION FOR PROGRESS BAR
-                  // initial={{
-                  //   scaleX: 0,
-                  //   scaleY: 1,
-                  //   borderRadius: "9999px",
-                  //   x: 1.6,
-                  // }}
-                  // animate={{ scaleX: 1, originX: 0, x: 0 }}
-                  // transition={{
-                  //   delay: 0.4 * index,
-                  //   ease: "easeOut",
-                  //   duration: 0.4,
-                  // }}
-                ></motion.div>
-              </div>
-
-              <div className="ml-2">
-                <p className="text-[#BFBFBF]">{language.progress}%</p>
-              </div>
+                  <div className="ml-2">
+                    <p className="text-[#BFBFBF]">{language.progress}%</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
-      <h1 className="mt-auto">{title} Skills</h1>
-      <p className="text-[#AEB1B7] font-light mt-1 leading-7 mb-3">{skills}</p>
+      <div className="mt-auto max-920px:mt-0 max-650px:mt-5">
+        <h1>{title} Skills</h1>
+        <p className="text-[#AEB1B7] font-light mt-1 leading-7 mb-3">
+          {skills}
+        </p>
+      </div>
     </div>
   );
 }
+
+// TEST ANIMATION FOR PROGRESS BAR
+// initial={{
+//   scaleX: 0,
+//   scaleY: 1,
+//   borderRadius: "9999px",
+//   x: 1.6,
+// }}
+// animate={{ scaleX: 1, originX: 0, x: 0 }}
+// transition={{
+//   delay: 0.4 * index,
+//   ease: "easeOut",
+//   duration: 0.4,
+// }}

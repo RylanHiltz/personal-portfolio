@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <section>
       <div className="grid grid-cols-2 w-full mt-20 pb-10">
-        <h2 className="text-2xl font-medium">Projects</h2>
+        <h2 className="text-2xl font-medium">My Projects </h2>
         <p className="text-2xl font-medium justify-self-end">2022 - Recent</p>
       </div>
       <div className="flex flex-col max-875px:justify-center max-875px:align-center items-center">
@@ -54,12 +54,11 @@ function Project({
   img,
   alt,
 }: projectProps) {
-
   // Variants for 3D hover animation
   const [layer1, setLayer1] = useState({});
   const [layer2, setLayer2] = useState({});
 
-  // Disables project hover animation for mobile screens 
+  // Disables project hover animation for mobile screens
   useEffect(() => {
     // Checks if screen is mobile
     let isMobile = window.innerWidth < 450;
@@ -70,18 +69,19 @@ function Project({
           x: 0,
           y: 0,
           transition: {
-            duration: 0.3,
+            duration: 0.4,
             type: "tween",
-            ease: "easeIn",
+            bounce: 0,
           },
         },
         hover: {
-          x: -7.5,
+          x: -7,
           y: -7,
           backgroundColor: "#1E1E1E",
           transition: {
-            duration: 0.3,
-            ease: "easeOut",
+            duration: 0.65,
+            type: "spring",
+            bounce: 0,
           },
         },
       });
@@ -90,19 +90,21 @@ function Project({
           x: 0,
           y: 0,
           transition: {
-            duration: 0.3,
-            ease: "easeIn",
+            duration: 0.4,
+            type: "tween",
+            bounce: 0,
           },
         },
         hover: {
           x: -7,
           y: -7,
           transition: {
-            duration: 0.3,
-            ease: "easeOut",
+            duration: 0.65,
+            type: "spring",
+            bounce: 0,
           },
         },
-      })
+      });
     }
   }, [setLayer1, setLayer2]);
 
@@ -129,6 +131,8 @@ function Project({
     },
   };
 
+  // TODO: Make a better designed project card for tablet responsivity
+
   // TODO: Add fade in and up animation for when individual projects are scrolled into view
 
   // TODO: Lower padding around project frame for mobile design and hide purple layers when screen width is > 425px
@@ -139,27 +143,27 @@ function Project({
         initial="rest"
         whileHover="hover"
         animate="rest"
-        className="z-1 w-full h-full min-h-[310px] bg-[#3E334C] rounded-[16px] max-mobile-lg:bg-transparent"
+        className="z-1 w-full h-full min-h-[310px] bg-[#3E334C] rounded-[20px] max-mobile-lg:bg-transparent"
       >
         <motion.div
           variants={layer2}
-          className="z-2 w-full h-full bg-[#4E3D5B] rounded-[16px] max-mobile-lg:bg-transparent"
+          className="z-2 w-full h-full bg-[#4E3D5B] rounded-[19px] max-mobile-lg:bg-transparent"
         >
           <motion.div
             variants={layer1}
-            className="z-3 flex w-full min-h-[310px] bg-[#1B1B1B] mb-[75px] mt-6 py-8 px-8 rounded-[15px] max-875px:flex-col max-875px:max-w-[500px] max-875px:h-auto"
+            className="z-3 flex w-full min-h-[310px] bg-[#1B1B1B] my-10 py-8 px-8 rounded-[18px] max-875px:flex-col max-875px:max-w-[500px] max-875px:h-auto border border-[#3C3C3C]"
           >
             <div className="flex flex-col ">
               {/* Image for project section */}
-              <div className="min-h-[250px] w-[400px] flex-none max-1015px:mb-5 max-875px:w-full max-875px:h-min max-875px:min-h-[0em] mb-auto">
+              <div className="min-h-[250px] w-[400px] flex-none max-1030px:mb-5 max-875px:w-full max-875px:h-min max-875px:min-h-[0em] mb-auto">
                 <Image
                   src={img}
                   alt={alt}
-                  className="rounded-[7px] opacity-90"
+                  className="rounded-[10px] opacity-90"
                 />
               </div>
               {/* Laptop/Tablet Tags */}
-              <div className="h-auto w-[400px] rounded-[5px] hidden max-1015px:block max-875px:hidden mt-auto flex-wrap">
+              <div className="h-auto w-[400px] rounded-[5px] hidden max-1030px:block max-875px:hidden mt-auto flex-wrap">
                 <ul className="h-[30px] flex gap-3">
                   {tags.map((tag, index) => (
                     <li
@@ -172,19 +176,19 @@ function Project({
                 </ul>
               </div>
             </div>
-            <div className="w-full pl-10 flex flex-col max-1015px:min-h-[310px] max-875px:pl-0 max-875px:h-fit">
+            <div className="w-full pl-10 flex flex-col max-1030px:min-h-[310px] max-875px:pl-0 max-875px:h-fit">
               <div className="flex w-full place-content-between font-medium text-lg mb-3">
                 <p>{title}</p>
                 <p>{date}</p>
               </div>
 
               {/* Description Paragraph */}
-              <p className="max-1015px:pt-3 font-extralight mb-auto">
+              <p className="max-1030px:pt-3 font-extralight mb-auto">
                 {description}
               </p>
-              <div className="flex place-content-between max-1015px:place-content-end max-875px:place-content-between max-875px:pt-5">
+              <div className="flex place-content-between max-1030px:place-content-end max-875px:place-content-between max-875px:pt-5">
                 {/* Desktop/Mobile Tags */}
-                <ul className=" flex gap-3 max-1015px:hidden mt-auto max-875px:flex flex-wrap">
+                <ul className=" flex gap-3 max-1030px:hidden mt-auto max-875px:flex flex-wrap">
                   {tags.map((tag, index) => (
                     <li
                       className="h-full w-fit max-h-[30px] bg-[#5D5D5D] px-2 py-1 rounded text-sm text-nowrap"
@@ -253,3 +257,4 @@ function Project({
     </section>
   );
 }
+
