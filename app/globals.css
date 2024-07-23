@@ -4,20 +4,25 @@
 
 /* Force darkmode background until lightmode has been designed */
 :root {
-  background-color: #0D0D0D;
-  --foreground-rgb: #DADDE2;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  background-color: #0d0d0d;
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: #fff !important;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    background-color: #0D0D0D;
+    background-color: #0d0d0d;
   }
 }
 
 body {
-  color: #DADDE2;
+  color: #dadde2;
   max-width: 70em;
   margin: 7.5em auto 2em;
   padding-right: 50px;

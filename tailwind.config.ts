@@ -29,13 +29,18 @@ const config: Config = {
         'tablet': '768px',
         'laptop': '960px',
 
-        // TODO: fix names so names & sizing match
+        // TODO: fix names (make them [section]-[size] e.g projects-sm) so names & sizing match
         // Misc. sizing for responsive elements 
         '875px': '887px',
         '1030px': '1030px',
         '920px': '920px',
         '650px': '700px',
         '585px': '585px',
+        'skills-mobile': '600px',
+        'project-tablet': '850px',
+        'project-grid': '855px',
+        'aboutme-tablet': '920px',
+        'contact-tablet': '875px',
       },
     },
   },
