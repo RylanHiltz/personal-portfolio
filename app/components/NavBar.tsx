@@ -7,7 +7,6 @@ import usePageBottom from "./usePageBottom";
 
 
 // TODO: Make navbar smooth scroll to different sections of page
-// TODO: Add a border rgba( 255, 255, 255, 0.18) and box-shadow to the navbar
 export default function NavBar() {
   
   let NavbarVariants = {
@@ -30,7 +29,7 @@ export default function NavBar() {
   }
 
   return (
-    <motion.nav className="self-center z-50 bg-gradient-to-r from-[#d3d3d3]/30 to-[#5D5D5D]/15 shadow-md shadow-black/[0.03] fixed bottom-12  backdrop-blur-[0.3rem] bg-opacity-20 rounded-2xl h-full w-full max-w-[350px] max-h-[65px] justify-center px-3 flex `${reachedBottom} ?`"
+    <motion.nav className="self-center z-50 bg-[#5d5d5d]/40 shadow-md shadow-black/[0.03] fixed bottom-12  backdrop-blur-[0.3rem] bg-opacity-70 rounded-2xl h-full w-full max-w-min max-h-[65px] justify-center px-8 flex"
     variants={NavbarVariants}
     animate="bottom">
       <ul className="flex items-center justify-center gap-6">

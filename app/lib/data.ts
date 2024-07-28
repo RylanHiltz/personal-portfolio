@@ -4,7 +4,7 @@ import AestheticonsImg from "@/public/aestheticonsimg.png";
 export const links = [
   {
     name: "Home",
-    hash: "",
+    hash: "#home",
   },
   {
     name: "About",
@@ -13,6 +13,10 @@ export const links = [
   {
     name: "Projects",
     hash: "#projects",
+  },
+  {
+    name: "Skills",
+    hash: "#skills",
   },
   {
     name: "Contact",
@@ -24,7 +28,7 @@ export const projectsData = [
   {
     title: "Figma iPhone Icon Packs",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     tags: ["Figma", "UI/UX"],
     date: "2022",
     projectURL:
@@ -102,11 +106,11 @@ export const skillsData = [
       },
       {
         lang: "C#",
-        progress: 88,
+        progress: 80,
       },
       {
-        lang: "PHP",
-        progress: 74,
+        lang: "C++",
+        progress: 40,
       },
     ],
     skills:

@@ -21,7 +21,8 @@ export default function Aboutme() {
   
   return (
     // TODO: add more padding on y-axis to align with figma design
-    <section className="flex justify-between items-center my-[12em] max-tablet:flex-col gap-[4em]">
+    <section className="flex justify-between items-center my-[12em] max-aboutme-tablet:flex-col gap-[4em] max-mobile-lg:my-4 scroll-mt-[12.5em]"
+    id="about">
       <div>
         <motion.div
           className="max-w-full flex flex-col justify-start items-start self-center"
@@ -48,7 +49,7 @@ export default function Aboutme() {
             </svg>
           </div>
           <h2 className="text-2xl font-semibold py-1">Hey, I&apos;m Rylan</h2>
-          <p className="text-[#D7D7D7] text-md font-extralight leading-8 text-start max-w-[525px] max-tablet:max-w-full">
+          <p className="text-[#D7D7D7] text-md font-extralight leading-8 text-start max-w-[525px] max-aboutme-tablet:max-w-full">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -59,7 +60,7 @@ export default function Aboutme() {
       </div>
       <div className="flex">
         {/* Placeholder for blob SVGs */}
-        <div className="w-[400px] h-[400px] bg-[#1B1B1B] rounded-[3em]">
+        <div className="w-[400px] h-[400px] bg-[#1B1B1B] rounded-[3em] border border-[#3C3C3C]">
         </div>
       </div>
     </section>

@@ -11,7 +11,8 @@ export default function Skills() {
   const isOdd = numOfExperience % 2 !== 0;
 
   return (
-    <div className="flex flex-col w-full h-full my-[10em]">
+    <div className="flex flex-col w-full h-full my-[10em] scroll-mt-20"
+    id="skills">
       <div className="w-full max-w-fit h-fit">
         <div className="flex gap-0.5">
           <h1 className="text-[#AF93C6] text-[18px] font-medium">
@@ -65,19 +66,19 @@ export default function Skills() {
             ))}
             {/* If experience cards are odd numbered, insert placeholder card */}
             {isOdd && (
-              <div className="h-[200px] bg-[#212121] w-full rounded-[10px] px-5 py-5 mb-8 border border-[#3C3C3C] last:mb-0">
+              <div className="h-[200px] bg-[#212121] w-full rounded-[10px] px-5 py-5 mb-8 border border-[#292929] last:mb-0">
                 <div className="relative right-[70px] w-[18px] h-[18px] bg-[#9175B5] rounded-full top-3"></div>
                 <div className="relative bottom-5">
                   <h1 className="text-[#E9E9E9] font-medium">Present-Future</h1>
                   <h2 className="text-[#E9E9E9] text-[18px] font-normal mt-2">
                     ???
                   </h2>
-                  <p className="max-w-[500px] mt-2 text-[#AEB1B7] font-light leading-7">
+                  <p className="max-w-[500px] mt-2 text-[#c2c2c2] font-light leading-7">
                     <em>
                       &ldquo;The pages of tomorrow are blank; let&lsquo;s write
                       something incredible.&rdquo;
-                    </em>
-                    <strong className="font-medium"> Unknown</strong>
+                    </em><br></br>
+                    <strong className="font-medium"> - Unknown</strong>
                   </p>
                 </div>
               </div>
@@ -86,7 +87,7 @@ export default function Skills() {
         </div>
 
         {/* Skills Section */}
-        <section className="max-650px:flex max-650px:flex-row max-650px:gap-5 max-585px:flex-col max-585px:gap-0">
+        <section className=" max-585px:flex-col max-585px:gap-0">
           {skillsData.map((skills, index) => (
             <React.Fragment key={index}>
               <div className="h-[432px] bg-[#212121] w-[325px] rounded-[10px] px-5 py-5 border border-[#3C3C3C] mb-8 last:mb-0 max-920px:w-full max-920px:h-min">
@@ -107,7 +108,7 @@ function ExperienceCard({ date, title, description }: experienceProps) {
     <div className="relative bottom-5">
       <h1 className="text-[#E9E9E9] font-medium">{date}</h1>
       <h2 className="text-[#E9E9E9] text-[18px] font-normal mt-2">{title}</h2>
-      <p className="max-w-[500px] mt-2 text-[#AEB1B7] font-light leading-7 max-920px:max-w-full">
+      <p className="max-w-[500px] mt-2 text-[#c2c2c2] font-light leading-7 max-920px:max-w-full">
         {description}
       </p>
     </div>
@@ -118,25 +119,25 @@ type skillsProps = (typeof skillsData)[number];
 
 function SkillsCard({ title, languages, skills }: skillsProps) {
   return (
-    <div className="h-full flex flex-col max-920px:flex-row max-920px:gap-[3em] max-650px:flex-col max-650px:gap-0">
+    <div className="h-full flex flex-col max-920px:flex-row max-920px:gap-[3em] max-skills-mobile:flex-col max-skills-mobile:gap-0">
       <div>
         <div className="w-full h-full">
           {/* Div for all progress bars */}
-          <div className="flex flex-col w-full min-w-[275px] max-920px:h-full max-650px:min-w-[50px]">
+          <div className="flex flex-col w-full min-w-[275px] max-920px:h-full">
             <h1>{title} Languages</h1>
             <div className="mt-3 max-920px:flex max-920px:flex-col max-920px:justify-evenly max-920px:h-full">
               {languages.map((language, index) => (
                 <div
                   key={index}
-                  className="flex justify-end my-1.5 max-920px:my-0.5 max-650px:my-1"
+                  className="flex justify-end my-1.5 max-920px:my-0.5 max-skills-mobile:my-1"
                 >
                   <div>
-                    <p className="flex justify-end text-[#BFBFBF] max-920px:w-[55px]">
+                    <p className="flex justify-end text-[#c2c2c2] max-920px:w-[55px]">
                       {language.lang}
                     </p>
                   </div>
                   {/* Progress Bars */}
-                  <div className="h-3.5 w-full max-w-[175px] bg-[#323232] rounded-full ml-3 mt-1 bg-clip-border max-650px:max-w-full">
+                  <div className="h-3.5 w-full max-w-[175px] bg-[#323232] rounded-full ml-3 mt-1 bg-clip-border max-skills-mobile:max-w-full">
                     <motion.div
                       className="h-3.5 bg-[#9175B5] rounded-full"
                       style={{ width: `${language.progress}%` }}
@@ -144,7 +145,7 @@ function SkillsCard({ title, languages, skills }: skillsProps) {
                   </div>
 
                   <div className="ml-2">
-                    <p className="text-[#BFBFBF]">{language.progress}%</p>
+                    <p className="text-[#c2c2c2]">{language.progress}%</p>
                   </div>
                 </div>
               ))}
@@ -152,9 +153,9 @@ function SkillsCard({ title, languages, skills }: skillsProps) {
           </div>
         </div>
       </div>
-      <div className="mt-auto max-920px:mt-0 max-650px:mt-5">
+      <div className="mt-auto max-920px:mt-0 max-skills-mobile:mt-5">
         <h1>{title} Skills</h1>
-        <p className="text-[#AEB1B7] font-light mt-1 leading-7 mb-3">
+        <p className="text-[#c2c2c2] font-light mt-1 leading-7 mb-3">
           {skills}
         </p>
       </div>

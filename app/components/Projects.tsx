@@ -14,12 +14,13 @@ export default function Projects() {
   };
 
   return (
-    <section>
+    <section
+    id="projects">
       <div className="grid grid-cols-2 w-full mt-20 pb-10">
         <h2 className="text-2xl font-medium">My Projects </h2>
         <p className="text-2xl font-medium justify-self-end">2022 - Recent</p>
       </div>
-      <div className="flex flex-col max-875px:justify-center max-875px:align-center items-center">
+      <div className="flex flex-col max-project-tablet:justify-center max-project-tablet:align-center items-center">
         {projectsData.slice(0, visibleProjects).map((project, index) => (
           <React.Fragment key={index}>
             <Project {...project} />
@@ -137,7 +138,7 @@ function Project({
 
   // TODO: Lower padding around project frame for mobile design and hide purple layers when screen width is > 425px
   return (
-    <section className="w-full h-full max-875px:max-w-[500px]">
+    <section className="w-full h-full max-project-tablet:max-w-[500px]">
       {/* Layers for hover animation */}
       <motion.div
         initial="rest"
@@ -151,11 +152,11 @@ function Project({
         >
           <motion.div
             variants={layer1}
-            className="z-3 flex w-full min-h-[310px] bg-[#1B1B1B] my-10 py-8 px-8 rounded-[18px] max-875px:flex-col max-875px:max-w-[500px] max-875px:h-auto border border-[#3C3C3C]"
+            className="z-3 flex w-full min-h-[310px] bg-[#1B1B1B] my-10 py-8 px-8 rounded-[18px] max-project-tablet:flex-col max-project-tablet:max-w-[500px] max-project-tablet:h-auto border border-[#3C3C3C]"
           >
-            <div className="flex flex-col ">
+            <div className="flex flex-col max-w-[400px] max-1030px:w-full max-project-tablet:max-w-full">
               {/* Image for project section */}
-              <div className="min-h-[250px] w-[400px] flex-none max-1030px:mb-5 max-875px:w-full max-875px:h-min max-875px:min-h-[0em] mb-auto">
+              <div className="min-h-[250px] w-[400px] fles-none max-1030px:mb-5 max-project-tablet:w-full max-project-tablet:h-min max-project-tablet:min-h-[0em] mb-auto">
                 <Image
                   src={img}
                   alt={alt}
@@ -163,7 +164,7 @@ function Project({
                 />
               </div>
               {/* Laptop/Tablet Tags */}
-              <div className="h-auto w-[400px] rounded-[5px] hidden max-1030px:block max-875px:hidden mt-auto flex-wrap">
+              <div className="h-auto max-w-[400px] rounded-[5px] hidden max-1030px:block max-project-tablet:hidden mt-auto flex-wrap">
                 <ul className="h-[30px] flex gap-3">
                   {tags.map((tag, index) => (
                     <li
@@ -176,19 +177,19 @@ function Project({
                 </ul>
               </div>
             </div>
-            <div className="w-full pl-10 flex flex-col max-1030px:min-h-[310px] max-875px:pl-0 max-875px:h-fit">
+            <div className="w-full pl-10 flex flex-col max-1030px:min-h-[310px] max-project-tablet:pl-0 max-project-tablet:h-fit">
               <div className="flex w-full place-content-between font-medium text-lg mb-3">
                 <p>{title}</p>
-                <p>{date}</p>
+                <p className="hidden">{date}</p>
               </div>
 
-              {/* Description Paragraph */}
-              <p className="max-1030px:pt-3 font-extralight mb-auto">
+              {/* Project Description */}
+              <p className="font-extralight mb-auto text-[#cfcfcf]">
                 {description}
               </p>
-              <div className="flex place-content-between max-1030px:place-content-end max-875px:place-content-between max-875px:pt-5">
+              <div className="flex place-content-between max-1030px:place-content-end max-project-tablet:place-content-between max-project-tablet:pt-5">
                 {/* Desktop/Mobile Tags */}
-                <ul className=" flex gap-3 max-1030px:hidden mt-auto max-875px:flex flex-wrap">
+                <ul className=" flex gap-3 max-1030px:hidden mt-auto max-project-tablet:flex flex-wrap">
                   {tags.map((tag, index) => (
                     <li
                       className="h-full w-fit max-h-[30px] bg-[#5D5D5D] px-2 py-1 rounded text-sm text-nowrap"
@@ -199,7 +200,7 @@ function Project({
                   ))}
                 </ul>
                 {/* Github button and arrow to navigate to project */}
-                <div className="min-h-[30px] w-[75px] rounded-[5px] mt-8 flex gap-3 place-content-end self-end">
+                <div className="min-h-[30px] w-[75px] rounded-[5px] flex gap-3 place-content-end self-end">
                   {githubURL && (
                     <button aria-label="github">
                       <motion.a
