@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 // TODO: Restructure animations to be like project section animations
@@ -40,6 +40,7 @@ const transition3 = {
 };
 
 export default function HeroSection() {
+
   return (
     <section className="max-w-[566px] scroll-mt-[100em]" id="home">
       <div className="grid grid-flow-col gap-3 w-grid1 pb-6">

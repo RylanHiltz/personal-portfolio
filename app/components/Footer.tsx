@@ -2,7 +2,9 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col w-full items-center justify-center mt-[6.25em] mb-[4em] text-[#727272]">
+
+    // TODO: hide bottom p when max mobile large? 
+    <footer className="flex flex-col w-full items-center justify-center mt-[0em] mb-[0.5em] text-[#727272]">
         <small>
           &copy; 2024 Rylan Hiltz. All Rights Reserved
         </small>

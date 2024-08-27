@@ -4,7 +4,7 @@
 
 /* Force darkmode background until lightmode has been designed */
 :root {
-  background-color: #0d0d0d;
+  background-color: #161616;
 
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
@@ -17,7 +17,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    background-color: #0d0d0d;
+    background-color: #161616;
   }
 }
 
@@ -28,6 +28,13 @@ body {
   padding-right: 50px;
   padding-left: 50px;
   width: 100%;
+}
+
+@media not all and (min-width: 500px) {
+  body {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }
 
 @layer utilities {

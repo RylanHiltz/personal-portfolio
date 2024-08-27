@@ -25,7 +25,7 @@ const config: Config = {
       screens: {
         'mobile-s': '320px',
         'mobile-m': '375px',
-        'mobile-lg': '475px',
+        'mobile-lg': '500px',
         'tablet': '768px',
         'laptop': '960px',
 
@@ -36,7 +36,7 @@ const config: Config = {
         '920px': '920px',
         '650px': '700px',
         '585px': '585px',
-        'skills-mobile': '745px',
+        'skills-mobile': '700px',
         'project-tablet': '855px',
         'project-grid': '855px',
         'aboutme-tablet': '920px',

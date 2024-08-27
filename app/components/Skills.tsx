@@ -41,7 +41,7 @@ export default function Skills() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div className="flex gap-5 mt-3">
-          <PurpleButton name="Contact Me" href=""></PurpleButton>
+          <PurpleButton name="Contact Me" href="#contact"></PurpleButton>
           <button>Download CV</button>
         </div>
       </div>
@@ -123,7 +123,7 @@ function SkillsCard({ title, languages, skills }: skillsProps) {
       <div>
         <div className="w-full h-full">
           {/* Div for all progress bars */}
-          <div className="flex flex-col w-full min-w-[275px] max-920px:h-full">
+          <div className="flex flex-col w-full min-w-[275px] max-920px:h-full max-skills-mobile:min-w-[100px]">
             <h1>{title} Languages</h1>
             <div className="mt-3 max-920px:flex max-920px:flex-col max-920px:justify-evenly max-920px:h-full">
               {languages.map((language, index) => (
@@ -153,7 +153,7 @@ function SkillsCard({ title, languages, skills }: skillsProps) {
           </div>
         </div>
       </div>
-      <div className="mt-auto max-920px:mt-0 max-skills-mobile:mt-5">
+      <div className="mt-auto max-920px:mt-0 max-skills-mobile:mt-5 ">
         <h1>{title} Skills</h1>
         <p className="text-[#c2c2c2] font-light mt-1 leading-7 mb-3">
           {skills}

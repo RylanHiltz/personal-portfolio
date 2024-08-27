@@ -1,5 +1,5 @@
 import React from "react";
-import SocialButton from "./SocialButton";
+import SocialButton from "./buttons/SocialButton";
 
 export default function InfoBar() {
   return (
@@ -7,7 +7,7 @@ export default function InfoBar() {
       <div className="col-span-3 max-laptop:col-span-4">
         <h2>Recent Experience</h2>
         <p className="text-[#CACACA] text-sm font-light pt-1">
-          Freelance Web Developer with 10+ satisfied clients{" "}
+          3rd Year Computer Science Student @ Trent University{" "}
         </p>
       </div>
 

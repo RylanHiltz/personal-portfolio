@@ -26,9 +26,9 @@ export const links = [
 
 export const projectsData = [
   {
-    title: "Figma iPhone Icon Packs",
+    title: "Aestheticons - iPhone Icons",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Aestheticons was a ~8 month project where I transformed 400 brand SVGs into icons, all designed in Figma. I compiled and converted logos into icons and reconstructed an iPhone home screen for image listings. This side project aimed at my Etsy store was able to gain over 1800 views and 50+ sales.",
     tags: ["Figma", "UI/UX"],
     date: "2022",
     projectURL:
@@ -131,7 +131,7 @@ export const experienceData = [
   },
   {
     date: "2024-Present",
-    title: "Studying At Trent University",
+    title: "Front-End Developer",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
