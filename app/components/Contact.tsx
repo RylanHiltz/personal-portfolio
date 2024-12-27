@@ -9,7 +9,7 @@ export default function Contact() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  // TODO: Add function to stop the ability to spam 
+  // TODO: Add function to stop the ability to spam
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
@@ -32,7 +32,7 @@ export default function Contact() {
 
   return (
     <section
-      className="flex justify-between mt-20 mb-[6em] gap-10 max-contact-tablet:flex-col scroll-mt-[8em] max-mobile-lg:scroll-mt-[-20em]"
+      className="flex justify-between mt-20 mb-[3em] gap-10 max-contact-tablet:flex-col scroll-mt-[6em] max-mobile-lg:scroll-mt-[-20em]"
       id="contact"
     >
       {/* Contact Info */}

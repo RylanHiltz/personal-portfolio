@@ -8,11 +8,13 @@ import { experienceData } from "../lib/data";
 export default function Skills() {
   // Checks if the number of cards is odd or even
   const numOfExperience = experienceData.length;
-  const isOdd = numOfExperience % 2 !== 0;
+  let isOdd = numOfExperience % 2 !== 0;
 
   return (
-    <div className="flex flex-col w-full h-full my-[10em] scroll-mt-20"
-    id="skills">
+    <div
+      className="flex flex-col w-full h-full my-[10em] scroll-mt-[8.25em]"
+      id="skills"
+    >
       <div className="w-full max-w-fit h-fit">
         <div className="flex gap-0.5">
           <h1 className="text-[#AF93C6] text-[18px] font-medium">
@@ -36,7 +38,7 @@ export default function Skills() {
         <h2 className="text-[#DADDE2] font-semibold text-[24px]">
           What I&apos;ve Learned
         </h2>
-        <p className="text-[#AEB1B7] max-w-[475px] font-light">
+        <p className="text-[#AEB1B7] max-w-[450px] pb-1 font-light bg-[#161616]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
@@ -48,7 +50,6 @@ export default function Skills() {
 
       {/* Div that holds [Timeline, Experience, & Skills] */}
       <div className="flex w-full mt-[4em] max-920px:flex-col-reverse max-920px:gap-8">
-        
         {/* Experience Section */}
         <div className="w-full flex">
           {/* Timeline for experience section */}
@@ -77,7 +78,8 @@ export default function Skills() {
                     <em>
                       &ldquo;The pages of tomorrow are blank; let&lsquo;s write
                       something incredible.&rdquo;
-                    </em><br></br>
+                    </em>
+                    <br></br>
                     <strong className="font-medium"> - Unknown</strong>
                   </p>
                 </div>

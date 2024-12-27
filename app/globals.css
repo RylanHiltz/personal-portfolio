@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Force darkmode background until lightmode has been designed */
 :root {
   background-color: #161616;
+
+  /* Hero Section Colors */
+  --hero1: #f0f0f0;
+  --hero2: #f0f0f0;
+  --hero3: #f0f0f0;
 
   input:-webkit-autofill,
   input:-webkit-autofill:hover,

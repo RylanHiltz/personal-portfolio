@@ -1,5 +1,4 @@
-import React from "react";
-import AestheticonsImg from "@/public/aestheticonsimg.png";
+import AestheticonsImg from "../images/aestheticonsimg.png";
 
 export const links = [
   {
@@ -109,7 +108,7 @@ export const skillsData = [
         progress: 80,
       },
       {
-        lang: "C++",
+        lang: "PHP",
         progress: 40,
       },
     ],

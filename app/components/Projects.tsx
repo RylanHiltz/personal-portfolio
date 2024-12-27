@@ -14,8 +14,7 @@ export default function Projects() {
   };
 
   return (
-    <section
-    id="projects">
+    <section id="projects" className="scroll-m-[5.75em]">
       <div className="grid grid-cols-2 w-full mt-20 pb-10">
         <h2 className="text-2xl font-medium">My Projects </h2>
         <p className="text-2xl font-medium justify-self-end">2022 - Recent</p>
@@ -189,7 +188,7 @@ function Project({
               </p>
               <div className="flex place-content-between max-1030px:place-content-end max-project-tablet:place-content-between max-project-tablet:pt-5">
                 {/* Desktop/Mobile Tags */}
-                <ul className=" flex gap-3 max-1030px:hidden mt-auto max-project-tablet:flex flex-wrap">
+                <ul className="flex gap-3 max-1030px:hidden mt-auto max-project-tablet:flex flex-wrap">
                   {tags.map((tag, index) => (
                     <li
                       className="h-full w-fit max-h-[30px] bg-[#5D5D5D] px-2 py-1 rounded text-sm text-nowrap"
@@ -258,4 +257,3 @@ function Project({
     </section>
   );
 }
-

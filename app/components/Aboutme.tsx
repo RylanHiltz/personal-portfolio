@@ -21,7 +21,7 @@ export default function Aboutme() {
 
   return (
     <section
-      className="flex justify-between items-center my-[12em] max-aboutme-tablet:flex-col gap-[4em] max-mobile-lg:my-4 scroll-mt-[15em]"
+      className="flex justify-between items-center my-[12em] max-aboutme-tablet:flex-col max-mobile-lg:my-4 scroll-mt-[15em]"
       id="about"
     >
       <div>
@@ -50,7 +50,7 @@ export default function Aboutme() {
             </svg>
           </div>
           <h2 className="text-2xl font-semibold py-1">Hey, I&apos;m Rylan</h2>
-          <p className="text-[#D7D7D7] text-md font-extralight leading-8 text-start max-w-[525px] max-aboutme-tablet:max-w-full">
+          <p className="text-[#D7D7D7] text-md font-extralight leading-8 text-start max-w-[525px] max-aboutme-tablet:max-w-full bg-[#161616]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -60,7 +60,11 @@ export default function Aboutme() {
         </motion.div>
       </div>
 
-      <div className="w-full max-w-[325px] min-h-[325px] bg-[#1B1B1B] rounded-[2em] border border-[#3C3C3C] relative">
+      {/* Placeholder Apps */}
+      {/* <div className="bg-blue-400 min-w-[110px] min-h-[110px] rounded-xl relative left-[30em] bottom-[10.5em] rotate-12 z-10"></div>
+      <div className="bg-blue-400 min-w-[100px] min-h-[100px] rounded-xl relative left-[23.5em] bottom-[-10em] z-30"></div> */}
+
+      <div className="w-full max-w-[325px] min-h-[325px] bg-[#1B1B1B] rounded-[2em] border border-[#3C3C3C] z-20">
         {/* <div className="w-[100px] h-[100px] rounded-lg bg-[#72d7df] absolute bottom-0 left-0"></div> */}
         <div className="min-h-[325px] flex flex-col items-center justify-center">
           {/* Placeholder for image */}
