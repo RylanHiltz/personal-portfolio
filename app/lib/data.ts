@@ -25,6 +25,17 @@ export const links = [
 
 export const projectsData = [
   {
+    title: "Sheetwise - AI Studysheet Generator",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    tags: ["Vite.js", "Javascript", "Tailwind CSS", "Python", "Django"],
+    date: "2024",
+    projectURL: "",
+    githubURL: "",
+    img: AestheticonsImg,
+    alt: "",
+  },
+  {
     title: "Aestheticons - iPhone Icons",
     description:
       "Aestheticons was a ~8 month project where I transformed 400 brand SVGs into icons, all designed in Figma. I compiled and converted logos into icons and reconstructed an iPhone home screen for image listings. This side project aimed at my Etsy store was able to gain over 1800 views and 50+ sales.",
@@ -39,22 +50,11 @@ export const projectsData = [
   {
     title: "My Personal Portfolio",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+      "This project is a showcase of my most recent work, skills, and experiences. This single page website was fully built using Next.js App Router, Typescript, and Tailwind CSS. I focused on creating a cohesive site in my favourite color, featuring a fully responsive design and complex animations using Framer Motion.",
     tags: ["React", "TypeScript", "Tailwind", "Framer-Motion"],
     date: "2024",
     projectURL: "",
     githubURL: "https://github.com/RylanHiltz/personal-portfolio",
-    img: AestheticonsImg,
-    alt: "",
-  },
-  {
-    title: "Project 3",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
-    tags: ["React", "TypeScript", "Tailwind CSS"],
-    date: "2024",
-    projectURL: "",
-    githubURL: "",
     img: AestheticonsImg,
     alt: "",
   },
@@ -86,7 +86,7 @@ export const skillsData = [
       },
     ],
     skills:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+      "Also skilled with other tools sucha as Photoshop, Figma, Git, Next.js Vercel. Have experience integrating REST APIs, creating reusable components, and creating fully resposive designs.",
   },
   { // Backend skills
     title: "Backend",
@@ -101,7 +101,7 @@ export const skillsData = [
       },
       {
         lang: "SQL",
-        progress: 35,
+        progress: 85,
       },
       {
         lang: "C#",
@@ -121,16 +121,16 @@ export const experienceData = [
   {
     date: "2018-2022",
     title: "Graduated From Eastview Secondary School",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "",
   },
   {
     date: "2022-2026",
     title: "Studying At Trent University",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Bachelors of Computer Science at Trent University",
   },
   {
     date: "2024-Present",
-    title: "Front-End Developer",
+    title: "Full-Time Student",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];

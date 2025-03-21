@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import headshot from "../images/headshot.jpg";
 
 export default function Aboutme() {
   // Variants for fade-in animation when in view
@@ -51,25 +52,37 @@ export default function Aboutme() {
           </div>
           <h2 className="text-2xl font-semibold py-1">Hey, I&apos;m Rylan</h2>
           <p className="text-[#D7D7D7] text-md font-extralight leading-8 text-start max-w-[525px] max-aboutme-tablet:max-w-full bg-[#161616]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum.
+            I’m a dedicated software developer with a strong interest in web
+            development—both frontend and backend, and love to turn random ideas
+            into real, working projects. From experimenting in Photoshop to
+            creating logos and designing websites, I eventually found myself
+            diving into code to bring those ideas to life. Now, I combine my eye
+            for design with my technical skills to build projects that are both
+            functional and visually engaging!
           </p>
         </motion.div>
       </div>
 
-      {/* Placeholder Apps */}
-      {/* <div className="bg-blue-400 min-w-[110px] min-h-[110px] rounded-xl relative left-[30em] bottom-[10.5em] rotate-12 z-10"></div>
-      <div className="bg-blue-400 min-w-[100px] min-h-[100px] rounded-xl relative left-[23.5em] bottom-[-10em] z-30"></div> */}
+      <div className="relative w-full max-w-[325px] min-h-[325px] mx-10">
+        {/* Colored squares behind */}
+        <div className="absolute w-[100px] h-[100px] bg-blue-400 rounded-xl top-[-55px] right-[-55px] z-10 rotate-[16deg]"></div>
+        <div className="absolute w-[110px] h-[110px] bg-green-400 rounded-xl bottom-[-55px] left-[-55px] z-0 rotate-[12deg]"></div>
 
-      <div className="w-full max-w-[325px] min-h-[325px] bg-[#1B1B1B] rounded-[2em] border border-[#3C3C3C] z-20">
-        {/* <div className="w-[100px] h-[100px] rounded-lg bg-[#72d7df] absolute bottom-0 left-0"></div> */}
-        <div className="min-h-[325px] flex flex-col items-center justify-center">
-          {/* Placeholder for image */}
-          <div className="w-[175px] h-[175px] rounded-full bg-[#353535]"></div>
-          <p className="text-center py-4 font-medium">Hey, Thats Me! 👋</p>
+        {/* Card with higher z-index */}
+        <div className="relative w-full h-full bg-[#1B1B1B] rounded-[2em] border border-[#3C3C3C] z-20">
+          {/* Colored squares in front */}
+
+          <div className="absolute w-[110px] h-[110px] bg-red-400 rounded-xl top-[-55px] left-[-55px] z-0 rotate-[-12deg]"></div>
+          <div className="absolute w-[100px] h-[100px] bg-orange-400 rounded-xl bottom-[-55px] right-[-55px] z-10 rotate-[-18deg]"></div>
+
+          {/* Main content */}
+          <div className="min-h-[325px] flex flex-col items-center justify-center z-50 relative">
+            <img
+              className="w-[175px] h-[175px] bg-[#353535] object-scale-down rounded-full"
+              src={headshot.src}
+            />
+            <p className="text-center py-4 font-medium">Hey, Thats Me! 👋</p>
+          </div>
         </div>
       </div>
     </section>
