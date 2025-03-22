@@ -39,8 +39,7 @@ export default function Skills() {
           What I&apos;ve Learned
         </h2>
         <p className="text-[#AEB1B7] max-w-[450px] pb-1 font-light bg-[#161616]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Some of my experience and skills that I have gathered :){" "}
         </p>
         <div className="flex gap-5 mt-3">
           <PurpleButton name="Contact Me" href="#contact"></PurpleButton>

@@ -132,6 +132,6 @@ export const experienceData = [
   {
     date: "2024-Present",
     title: "Full-Time Student",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Currently focusing on personal projects, as well as  ",
   },
 ];
