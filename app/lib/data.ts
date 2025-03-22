@@ -1,4 +1,4 @@
-import AestheticonsImg from "../images/aestheticonsImg.png";
+import AestheticonsImg from "../images/aestheticonsimg.png";
 import PortfolioImg from "../images/portfolioImg.png"
 
 export const links = [
