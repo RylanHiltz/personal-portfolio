@@ -29,13 +29,19 @@ export default function InfoBar() {
               />
             </li>
             <li>
-              <SocialButton name="LinkedIn" href="" />
+              <SocialButton
+                name="LinkedIn"
+                href="https://www.linkedin.com/in/rylan-hiltz-79485b231/"
+              />
             </li>
             <li>
-              <SocialButton name="Dribbble" href="" />
+              <SocialButton
+                name="Indeed"
+                href="https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage"
+              />
             </li>
             <li>
-              <SocialButton name="Awwwards" href="" />
+              <SocialButton name="Email" href="mailto:rylanhiltz2@gmail.com" />
             </li>
           </ul>
         </div>

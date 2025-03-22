@@ -5,9 +5,9 @@
 :root {
   background-color: #161616;
   /* Hero Section Colors */
-  --hero1: #f0f0f0;
-  --hero2: #f0f0f0;
-  --hero3: #f0f0f0;
+  --primary1: #705f85;
+  --primary2: #59456a;
+  --primary3: #40344f;
 
   input:-webkit-autofill,
   input:-webkit-autofill:hover,

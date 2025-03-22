@@ -1,4 +1,5 @@
-import AestheticonsImg from "../images/aestheticonsimg.png";
+import AestheticonsImg from "../images/aestheticonsImg.png";
+import PortfolioImg from "../images/portfolioImg.png"
 
 export const links = [
   {
@@ -27,7 +28,7 @@ export const projectsData = [
   {
     title: "Sheetwise - AI Studysheet Generator",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+      "Sheetwise is an ongoing project in development that leverages AI to transform pdf or text notes into organized, customizable PDFs. By parsing raw note content into JSON, Sheetwise will allow user to generate tailored PDFs with personalized layouts, styles, and content.",
     tags: ["Vite.js", "Javascript", "Tailwind CSS", "Python", "Django"],
     date: "2024",
     projectURL: "",
@@ -38,7 +39,7 @@ export const projectsData = [
   {
     title: "Aestheticons - iPhone Icons",
     description:
-      "Aestheticons was a ~8 month project where I transformed 400 brand SVGs into icons, all designed in Figma. I compiled and converted logos into icons and reconstructed an iPhone home screen for image listings. This side project aimed at my Etsy store was able to gain over 1800 views and 50+ sales.",
+      "Aestheticons was a ~8 month project where I transformed 400 brand SVGs into icons, all designed in Figma. I compiled and converted logos into icons and reconstructed an iPhone home screen for image listings. This side project aimed at my Etsy store was able to gain over 4600 views and 150+ sales.",
     tags: ["Figma", "UI/UX"],
     date: "2022",
     projectURL:
@@ -55,7 +56,7 @@ export const projectsData = [
     date: "2024",
     projectURL: "",
     githubURL: "https://github.com/RylanHiltz/personal-portfolio",
-    img: AestheticonsImg,
+    img: PortfolioImg,
     alt: "",
   },
 ] as const;
@@ -121,12 +122,12 @@ export const experienceData = [
   {
     date: "2018-2022",
     title: "Graduated From Eastview Secondary School",
-    description: "",
+    description: "With Honours achieving a 3.7 GPA (86%)",
   },
   {
     date: "2022-2026",
     title: "Studying At Trent University",
-    description: "Bachelors of Computer Science at Trent University",
+    description: "Bachelors of Computer Science at Trent University\nSpecializing in Software Engineering",
   },
   {
     date: "2024-Present",

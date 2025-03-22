@@ -111,7 +111,12 @@ function ExperienceCard({ date, title, description }: experienceProps) {
       <h1 className="text-[#E9E9E9] font-medium">{date}</h1>
       <h2 className="text-[#E9E9E9] text-[18px] font-normal mt-2">{title}</h2>
       <p className="max-w-[500px] mt-2 text-[#c2c2c2] font-light leading-7 max-920px:max-w-full">
-        {description}
+        {description.split("\n").map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
       </p>
     </div>
   );
