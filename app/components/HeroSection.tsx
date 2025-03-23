@@ -41,7 +41,7 @@ const transition3 = {
 
 export default function HeroSection() {
   return (
-    <section className="max-w-[566px] scroll-mt-[100em]" id="home">
+    <section className="max-w-[566px] scroll-mt-[100em] mt-[4em]" id="home">
       <div className="grid grid-flow-col gap-3 w-grid1 pb-6">
         <motion.div
           className="col-span-2 w-full h-5 rounded-sm bg-[#705F85]"

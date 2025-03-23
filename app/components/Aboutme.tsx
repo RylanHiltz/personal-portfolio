@@ -22,7 +22,7 @@ export default function Aboutme() {
 
   return (
     <section
-      className="flex justify-between items-center my-[12em] max-aboutme-tablet:flex-col max-aboutme-tablet:gap-[150px] max-mobile-lg:my-4 scroll-mt-[15em]"
+      className="flex justify-between items-center my-[16em] max-aboutme-tablet:flex-col max-aboutme-tablet:gap-[150px] max-mobile-lg:my-4 scroll-mt-[20em]"
       id="about"
     >
       <div>
@@ -53,12 +53,12 @@ export default function Aboutme() {
           <h2 className="text-2xl font-semibold py-1">Hey, I&apos;m Rylan</h2>
           <p className="text-[#D7D7D7] text-md font-extralight leading-8 text-start max-w-[525px] max-aboutme-tablet:max-w-full bg-[#161616]">
             I&apos;m a Canadian software developer with a strong interest in web
-            development—both frontend and backend, and love to turn random ideas
-            into real, working projects. From experimenting in Photoshop to
-            creating logos and designing websites, I eventually found myself
-            diving into code to bring those ideas to life. Now, I combine my eye
-            for design with my technical skills to build projects that are both
-            functional & visually engaging!
+            development—both frontend & backend, and love to turn random ideas
+            into real, working projects. From designing in Photoshop to creating
+            logos & designing websites, I eventually found myself diving into
+            code to bring those ideas to life. Now, I combine my eye for design
+            with my technical skills to build projects that are both functional
+            & visually engaging!
           </p>
         </motion.div>
       </div>

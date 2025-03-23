@@ -36,7 +36,7 @@ export default function NavBar() {
 
   return (
     <motion.nav
-      className="self-center z-50 bg-[#424242]/60 shadow-md shadow-black/[0.03] fixed top-7 backdrop-blur-[0.3rem] bg-opacity-70 rounded-2xl h-full w-full max-w-[400px] max-h-[65px] flex min-w-[100px] px-3"
+      className="self-center z-50 bg-[#424242]/60 shadow-md shadow-black/[0.03] fixed top-10 backdrop-blur-[0.3rem] bg-opacity-70 rounded-2xl h-full w-full max-w-[400px] max-h-[65px] flex min-w-[100px] px-3"
       initial="hidden"
       animate={reachedBottom ? "hidden" : "visible"}
       variants={variants}

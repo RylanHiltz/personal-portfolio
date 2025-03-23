@@ -28,7 +28,7 @@ export const projectsData = [
   {
     title: "Sheetwise - AI Studysheet Generator",
     description:
-      "Sheetwise is an ongoing project in development that leverages AI to transform pdf or text notes into organized, customizable PDFs. By parsing raw note content into JSON, Sheetwise will allow user to generate tailored PDFs with personalized layouts, styles, and content.",
+      "Sheetwise is an ongoing project in development that leverages AI to transform pdf or text notes into organized, customizable PDFs. By parsing raw note content into JSON, Sheetwise will allow users to generate tailored PDFs with personalized layouts, styles, and content.",
     tags: ["Vite.js", "Javascript", "Tailwind CSS", "Python", "Django"],
     date: "2024",
     projectURL: "",
@@ -87,7 +87,7 @@ export const skillsData = [
       },
     ],
     skills:
-      "Also skilled with other tools sucha as Photoshop, Figma, Git, Next.js Vercel. Have experience integrating REST APIs, creating reusable components, and creating fully resposive designs.",
+      "Also skilled with other tools such as Photoshop, Figma, Git, Next.js Vercel. Have experience integrating REST APIs, creating reusable components, and creating fully resposive designs.",
   },
   { // Backend skills
     title: "Backend",
@@ -132,6 +132,6 @@ export const experienceData = [
   {
     date: "2024-Present",
     title: "Full-Time Student",
-    description: "Currently focusing on personal projects, as well as  ",
+    description: "Currently focusing on personal projects, as well as seeking internship/developer positions ",
   },
 ];
