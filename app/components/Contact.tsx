@@ -32,12 +32,12 @@ export default function Contact() {
 
   return (
     <section
-      className="flex justify-between mt-20 mb-[3em] gap-10 max-contact-tablet:flex-col scroll-mt-[6em] max-mobile-lg:scroll-mt-[-20em]"
+      className="flex justify-between mt-[3em] mb-[5em] gap-10 max-contact-tablet:flex-col scroll-mt-[6em] max-mobile-lg:scroll-mt-[-20em]"
       id="contact"
     >
       {/* Contact Info */}
       <div className="self-center max-contact-tablet:self-start max-contact-tablet:mb-5">
-        <div className="">
+        <div>
           <h1 className="text-[30px] font-semibold leading-10 text-nowrap">
             Want To Get In Touch?<br></br>Send Me A Message!
           </h1>
@@ -45,8 +45,8 @@ export default function Contact() {
             Contact me directly or via the provided form
           </h2>
           {/* Email & Phone */}
-          <div className="ml-4">
-            <div className="mt-4 flex gap-4 items-center">
+          <div>
+            <div className="flex gap-4 items-center">
               <MdPhone size={22} />
               <a className="underline font-light" href="tel:+17057161324">
                 1+ 705-716-1324
@@ -67,7 +67,7 @@ export default function Contact() {
 
       {/* Email Form */}
       <form
-        className="w-full min-w-[100px] max-w-[500px] min-h-[450px] bg-[#212121] px-[40px] py-[40px] rounded-[20px] flex flex-col gap-5 border border-[#3C3C3C] max-contact-tablet:max-w-full max-mobile-lg:py-7 max-mobile-lg:px-7 max-mobile-lg:rounded-xl"
+        className="w-full min-w-[100px] max-w-[500px] min-h-[450px] bg-[#212121] p-[30px] rounded-[1.25em] flex flex-col gap-5 border border-[#3C3C3C] max-contact-tablet:max-w-full max-mobile-lg:py-7 max-mobile-lg:px-7 max-mobile-lg:rounded-xl"
         onSubmit={onSubmit}
       >
         <h1 className="font-medium text-[20px]">Send Me An Email!</h1>

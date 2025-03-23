@@ -43,7 +43,7 @@ export const projectsData = [
     tags: ["Figma", "UI/UX"],
     date: "2022",
     projectURL:
-      "https://www.figma.com/design/lDJk2klmszuk3xHPHR4IXh/iPhone-Icons?node-id=0-1&t=cfGog6cp8gIXyNDx-1",
+      "https://www.etsy.com/ca/shop/ShopAestheticons?ref=shop-header-name&listing_id=1546182725&from_page=listing",
     githubURL: "",
     img: AestheticonsImg,
     alt: "",
@@ -52,7 +52,7 @@ export const projectsData = [
     title: "My Personal Portfolio",
     description:
       "This project is a showcase of my most recent work, skills, and experiences. This single page website was fully built using Next.js App Router, Typescript, and Tailwind CSS. I focused on creating a cohesive site in my favourite color, featuring a fully responsive design and complex animations using Framer Motion.",
-    tags: ["React", "TypeScript", "Tailwind", "Framer-Motion"],
+    tags: ["Next.js", "TypeScript", "Tailwind", "Framer-Motion"],
     date: "2024",
     projectURL: "",
     githubURL: "https://github.com/RylanHiltz/personal-portfolio",
@@ -71,19 +71,19 @@ export const skillsData = [
       },
       {
         lang: "CSS",
-        progress: 90,
+        progress: 95,
       },
       {
         lang: "JS",
-        progress: 78,
-      },
-      {
-        lang: "TS",
         progress: 85,
       },
       {
+        lang: "TS",
+        progress: 70,
+      },
+      {
         lang: "React",
-        progress: 74,
+        progress: 80,
       },
     ],
     skills:
@@ -94,27 +94,27 @@ export const skillsData = [
     languages: [
       {
         lang: "Java",
-        progress: 78,
-      },
-      {
-        lang: "Python",
         progress: 70,
       },
       {
-        lang: "SQL",
-        progress: 85,
+        lang: "Python",
+        progress: 90,
       },
       {
-        lang: "C#",
+        lang: "SQL",
         progress: 80,
       },
       {
+        lang: "C#",
+        progress: 85,
+      },
+      {
         lang: "PHP",
-        progress: 40,
+        progress: 75,
       },
     ],
     skills:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+      "Have experience setting up secure authentication with JWT, as well as building and consuming REST APIs. Skilled with tools such as MariaDB, MySQL, Django, Node.js and other backend technologies.",
   },
 ] as const;
 
@@ -132,6 +132,6 @@ export const experienceData = [
   {
     date: "2024-Present",
     title: "Full-Time Student",
-    description: "Currently focusing on personal projects, as well as seeking internship/developer positions ",
+    description: "Currently focusing on personal projects, as well as seeking internship/developer positions to further my experience.",
   },
 ];

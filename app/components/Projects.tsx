@@ -15,8 +15,29 @@ export default function Projects() {
 
   return (
     <section id="projects" className="scroll-m-[5.75em]">
-      <div className="grid grid-cols-2 w-full mt-20 pb-10">
-        <h2 className="text-2xl font-medium">My Projects </h2>
+      <div className="flex justify-between  w-full mt-20 pb-10 items-end">
+        <div>
+          <div className="flex">
+            <h1 className="text-[#AF93C6] text-[18px] font-medium">
+              Projects & Work
+            </h1>
+            <svg
+              width="12"
+              height="19"
+              viewBox="0 0 12 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.67029e-05 9.08702C3.30498 9.08702 5.98583 5.32167 6 0.669245C6.01417 5.32167 8.69501 9.08702 12 9.08702C12 9.08702 12 9.08702 12.0001 9.08702C12 9.08702 12 9.08702 12 9.08702C8.69501 9.08702 6.01417 12.8524 6 17.5048C5.98583 12.8524 3.30498 9.08702 2.67029e-05 9.08702C1.78019e-05 9.08702 8.90096e-06 9.08702 0 9.08702C8.90096e-06 9.08702 1.78019e-05 9.08702 2.67029e-05 9.08702ZM5.98354 18.174H6.01646C6.00615 17.9774 6.00061 17.779 6 17.5789C5.99939 17.779 5.99385 17.9774 5.98354 18.174ZM6.01646 0H5.98353C5.99385 0.19658 5.99939 0.395029 6 0.595119C6.00061 0.395029 6.00615 0.19658 6.01646 0Z"
+                fill="#AF93C6"
+              />
+            </svg>
+          </div>
+          <h2 className="text-2xl font-medium">A Look At My Creations</h2>
+        </div>
         <p className="text-2xl font-medium justify-self-end">2022 - Recent</p>
       </div>
       <div className="flex flex-col max-project-tablet:justify-center max-project-tablet:align-center items-center">
@@ -131,13 +152,118 @@ function Project({
     },
   };
 
+  const squares = [
+    {
+      top: "10%",
+      left: "20%",
+      size: 50,
+      bg: "#4E3D5B",
+      rotate: 15,
+    },
+    {
+      top: "25%",
+      left: "40%",
+      size: 30,
+      bg: "#3E334C",
+      rotate: 5,
+    },
+    {
+      top: "40%",
+      left: "50%",
+      size: 70,
+      bg: "#3E334C",
+      rotate: -10,
+    },
+    {
+      top: "55%",
+      left: "30%",
+      size: 40,
+      bg: "#4E3D5B",
+      rotate: 10,
+    },
+    {
+      top: "70%",
+      left: "10%",
+      size: 40,
+      bg: "#4E3D5B",
+      rotate: 25,
+    },
+    {
+      top: "85%",
+      left: "30%",
+      size: 20,
+      bg: "#3E334C",
+      rotate: 35,
+    },
+  ];
+
   // TODO: Make a better designed project card for tablet responsivity
 
   // TODO: Add fade in and up animation for when individual projects are scrolled into view
 
   // TODO: Lower padding around project frame for mobile design and hide purple layers when screen width is > 425px
   return (
-    <section className="w-full h-full max-project-tablet:max-w-[500px]">
+    <section className="w-full h-full max-project-tablet:max-w-[500px] relative">
+      {/* Decorative divs for tablet screens */}
+      {/* <motion.div
+        className="hidden max-project-tablet:block absolute top-[0.1em] left-[32em] w-[200px] h-[750px] overflow-x-hidden"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {squares.map((square, index) => (
+          <motion.div
+            key={index}
+            className="absolute"
+            style={{
+              top: square.top,
+              left: square.left,
+              width: `${square.size}px`,
+              height: `${square.size}px`,
+              backgroundColor: square.bg,
+            }}
+            variants={{
+              hidden: { opacity: 0, y: 50, rotate: square.rotate - 10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                rotate: square.rotate + Math.random() * 10 - 5,
+                transition: { duration: 0.5, delay: index * 0.2 },
+              },
+            }}
+          />
+        ))}
+      </motion.div>
+      <motion.div
+        className="hidden max-project-tablet:block absolute top-[0.1em] right-[32em] w-[200px] h-[750px] scale-x-[-1] overflow-x-hidden"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {squares.map((square, index) => (
+          <motion.div
+            key={index}
+            className="absolute"
+            style={{
+              top: square.top,
+              left: square.left,
+              width: `${square.size}px`,
+              height: `${square.size}px`,
+              backgroundColor: square.bg,
+            }}
+            variants={{
+              hidden: { opacity: 0, y: 50, rotate: square.rotate - 10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                rotate: square.rotate + Math.random() * 10 - 5,
+                transition: { duration: 0.5, delay: index * 0.2 },
+              },
+            }}
+          />
+        ))}
+      </motion.div> */}
+
       {/* Layers for hover animation */}
       <motion.div
         initial="rest"
