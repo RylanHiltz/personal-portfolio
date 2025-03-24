@@ -129,6 +129,22 @@ function Project({
     }
   }, [setLayer1, setLayer2]);
 
+  const scrollVariants = {
+    offscreen: {
+      y: 50,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 0.2,
+        ease: "backInOut",
+      },
+    },
+  };
+
   // Variants for Github and project button animations
   const buttonVariants = {
     tap: {
@@ -152,118 +168,20 @@ function Project({
     },
   };
 
-  const squares = [
-    {
-      top: "10%",
-      left: "20%",
-      size: 50,
-      bg: "#4E3D5B",
-      rotate: 15,
-    },
-    {
-      top: "25%",
-      left: "40%",
-      size: 30,
-      bg: "#3E334C",
-      rotate: 5,
-    },
-    {
-      top: "40%",
-      left: "50%",
-      size: 70,
-      bg: "#3E334C",
-      rotate: -10,
-    },
-    {
-      top: "55%",
-      left: "30%",
-      size: 40,
-      bg: "#4E3D5B",
-      rotate: 10,
-    },
-    {
-      top: "70%",
-      left: "10%",
-      size: 40,
-      bg: "#4E3D5B",
-      rotate: 25,
-    },
-    {
-      top: "85%",
-      left: "30%",
-      size: 20,
-      bg: "#3E334C",
-      rotate: 35,
-    },
-  ];
-
   // TODO: Make a better designed project card for tablet responsivity
 
   // TODO: Add fade in and up animation for when individual projects are scrolled into view
 
   // TODO: Lower padding around project frame for mobile design and hide purple layers when screen width is > 425px
-  return (
-    <section className="w-full h-full max-project-tablet:max-w-[500px] relative">
-      {/* Decorative divs for tablet screens */}
-      {/* <motion.div
-        className="hidden max-project-tablet:block absolute top-[0.1em] left-[32em] w-[200px] h-[750px] overflow-x-hidden"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        {squares.map((square, index) => (
-          <motion.div
-            key={index}
-            className="absolute"
-            style={{
-              top: square.top,
-              left: square.left,
-              width: `${square.size}px`,
-              height: `${square.size}px`,
-              backgroundColor: square.bg,
-            }}
-            variants={{
-              hidden: { opacity: 0, y: 50, rotate: square.rotate - 10 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                rotate: square.rotate + Math.random() * 10 - 5,
-                transition: { duration: 0.5, delay: index * 0.2 },
-              },
-            }}
-          />
-        ))}
-      </motion.div>
-      <motion.div
-        className="hidden max-project-tablet:block absolute top-[0.1em] right-[32em] w-[200px] h-[750px] scale-x-[-1] overflow-x-hidden"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        {squares.map((square, index) => (
-          <motion.div
-            key={index}
-            className="absolute"
-            style={{
-              top: square.top,
-              left: square.left,
-              width: `${square.size}px`,
-              height: `${square.size}px`,
-              backgroundColor: square.bg,
-            }}
-            variants={{
-              hidden: { opacity: 0, y: 50, rotate: square.rotate - 10 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                rotate: square.rotate + Math.random() * 10 - 5,
-                transition: { duration: 0.5, delay: index * 0.2 },
-              },
-            }}
-          />
-        ))}
-      </motion.div> */}
 
+  return (
+    <motion.section
+      className="w-full h-full max-project-tablet:max-w-[500px] relative"
+      variants={scrollVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true }}
+    >
       {/* Layers for hover animation */}
       <motion.div
         initial="rest"
@@ -352,27 +270,29 @@ function Project({
                     </button>
                   )}
                   <button aria-label="project">
-                    <motion.a
-                      href={projectURL}
-                      target="_blank"
-                      whileHover="hover"
-                      whileTap="tap"
-                      aria-label="Navigate to project"
-                    >
-                      <motion.svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 18 18"
-                        xmlns="http://www.w3.org/2000/svg"
-                        variants={buttonVariants}
+                    {projectURL && (
+                      <motion.a
+                        href={projectURL}
+                        target="_blank"
+                        whileHover="hover"
+                        whileTap="tap"
+                        aria-label="Navigate to project"
                       >
-                        <motion.path
-                          d="M0.717725 2.06906C0.716809 2.27405 0.756477 2.47718 0.834465 2.6667C0.912452 2.85621 1.0272 3.02839 1.1721 3.17329C1.31699 3.31818 1.48917 3.43293 1.67868 3.51091C1.8682 3.5889 2.07132 3.62857 2.27631 3.62765L12.273 3.62772L0.718681 14.6332C0.427366 14.9245 0.263573 15.3196 0.263421 15.7314C0.26327 16.1432 0.426702 16.5382 0.717801 16.8293C1.0089 17.1204 1.40382 17.2838 1.81565 17.2836C2.22748 17.2835 2.62255 17.1197 2.91387 16.8284L14.3408 5.78974L14.3259 15.2691C14.3258 15.6826 14.4899 16.0792 14.7822 16.3714C15.0745 16.6637 15.471 16.8278 15.8845 16.8277C16.298 16.8275 16.6947 16.6631 16.9872 16.3706C17.2797 16.0781 17.4442 15.6814 17.4443 15.2679L17.5771 2.07738C17.5729 2.49353 17.528 1.6715 17.4456 1.48449C17.3723 1.295 17.2602 1.12292 17.1166 0.979274C16.973 0.835631 16.8009 0.72359 16.6114 0.65032C16.4244 0.567867 15.5444 0.508999 15.8845 0.509235H2.27755C2.07257 0.50847 1.86941 0.548323 1.67983 0.62645C1.49026 0.704577 1.31798 0.819483 1.17297 0.964485C1.02797 1.10949 0.913066 1.28177 0.834939 1.47134C0.756812 1.66092 0.71696 1.86408 0.717725 2.06906Z"
-                          fill="#929292"
-                          variants={pathVariants}
-                        />
-                      </motion.svg>
-                    </motion.a>
+                        <motion.svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 18 18"
+                          xmlns="http://www.w3.org/2000/svg"
+                          variants={buttonVariants}
+                        >
+                          <motion.path
+                            d="M0.717725 2.06906C0.716809 2.27405 0.756477 2.47718 0.834465 2.6667C0.912452 2.85621 1.0272 3.02839 1.1721 3.17329C1.31699 3.31818 1.48917 3.43293 1.67868 3.51091C1.8682 3.5889 2.07132 3.62857 2.27631 3.62765L12.273 3.62772L0.718681 14.6332C0.427366 14.9245 0.263573 15.3196 0.263421 15.7314C0.26327 16.1432 0.426702 16.5382 0.717801 16.8293C1.0089 17.1204 1.40382 17.2838 1.81565 17.2836C2.22748 17.2835 2.62255 17.1197 2.91387 16.8284L14.3408 5.78974L14.3259 15.2691C14.3258 15.6826 14.4899 16.0792 14.7822 16.3714C15.0745 16.6637 15.471 16.8278 15.8845 16.8277C16.298 16.8275 16.6947 16.6631 16.9872 16.3706C17.2797 16.0781 17.4442 15.6814 17.4443 15.2679L17.5771 2.07738C17.5729 2.49353 17.528 1.6715 17.4456 1.48449C17.3723 1.295 17.2602 1.12292 17.1166 0.979274C16.973 0.835631 16.8009 0.72359 16.6114 0.65032C16.4244 0.567867 15.5444 0.508999 15.8845 0.509235H2.27755C2.07257 0.50847 1.86941 0.548323 1.67983 0.62645C1.49026 0.704577 1.31798 0.819483 1.17297 0.964485C1.02797 1.10949 0.913066 1.28177 0.834939 1.47134C0.756812 1.66092 0.71696 1.86408 0.717725 2.06906Z"
+                            fill="#929292"
+                            variants={pathVariants}
+                          />
+                        </motion.svg>
+                      </motion.a>
+                    )}
                   </button>
                 </div>
               </div>
@@ -380,6 +300,6 @@ function Project({
           </motion.div>
         </motion.div>
       </motion.div>
-    </section>
+    </motion.section>
   );
 }

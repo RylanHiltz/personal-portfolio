@@ -20,6 +20,14 @@ export default function Aboutme() {
     },
   };
 
+  const squareVariants = {
+    initial: {
+      opacity: 0,
+      scale: 0.5,
+      rotate: 0,
+    },
+  };
+
   return (
     <section
       className="flex justify-between items-center my-[16em] max-aboutme-tablet:flex-col max-aboutme-tablet:gap-[150px] max-mobile-lg:my-4 scroll-mt-[20em]"
@@ -63,28 +71,101 @@ export default function Aboutme() {
         </motion.div>
       </div>
 
-      <div className="relative w-full max-w-[325px] min-h-[325px] mx-10">
+      <motion.div
+        className="relative w-full max-w-[325px] min-h-[325px] mx-10"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, staggerChildren: 0.8, delay: 0.75 }}
+        viewport={{ once: true }}
+      >
         {/* Colored squares behind */}
-        <div className="absolute w-[100px] h-[100px] bg-[var(--primary2)] rounded-xl top-[-55px] right-[-55px] z-10 rotate-[16deg]"></div>
-        <div className="absolute w-[110px] h-[110px] bg-[var(--primary1)] rounded-xl bottom-[-55px] left-[-55px] z-0 rotate-[12deg]"></div>
+        <motion.div
+          className="absolute w-[100px] h-[100px] bg-[var(--primary2)] rounded-xl top-[-55px] right-[-55px] z-10 rotate-[16deg]"
+          variants={squareVariants}
+          initial="initial"
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            rotate: 16,
+            transition: { duration: 0.6, delay: 1.2, ease: "backInOut" },
+          }}
+          viewport={{ once: true }}
+        ></motion.div>
+        <motion.div
+          className="absolute w-[110px] h-[110px] bg-[var(--primary1)] rounded-xl bottom-[-55px] left-[-55px] z-0 rotate-[12deg]"
+          variants={squareVariants}
+          initial="initial"
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            rotate: 12,
+            transition: { duration: 0.6, delay: 1.4, ease: "backInOut" },
+          }}
+          viewport={{ once: true }}
+        ></motion.div>
 
         {/* Card with higher z-index */}
-        <div className="relative w-full h-full bg-[#1B1B1B] rounded-[2em] border border-[#3C3C3C] z-20">
+        <motion.div
+          className="relative w-full h-full bg-[#1B1B1B] rounded-[2em] border border-[#3C3C3C] z-20"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 0.5 },
+          }}
+          viewport={{ once: true }}
+        >
           {/* Colored squares in front */}
-
-          <div className="absolute w-[110px] h-[110px] bg-[var(--primary3)] rounded-xl top-[-55px] left-[-55px] z-0 rotate-[-12deg]"></div>
-          <div className="absolute w-[100px] h-[100px] bg-[var(--primary3)] rounded-xl bottom-[-55px] right-[-55px] z-10 rotate-[-18deg]"></div>
+          <motion.div
+            className="absolute w-[110px] h-[110px] bg-[var(--primary3)] rounded-xl top-[-55px] left-[-55px] z-0 rotate-[-12deg]"
+            variants={squareVariants}
+            initial="initial"
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              rotate: -12,
+              transition: { duration: 0.6, delay: 1.6, ease: "backInOut" },
+            }}
+            viewport={{ once: true }}
+          ></motion.div>
+          <motion.div
+            className="absolute w-[100px] h-[100px] bg-[var(--primary3)] rounded-xl bottom-[-55px] right-[-55px] z-10 rotate-[-18deg]"
+            variants={squareVariants}
+            initial="initial"
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              rotate: -18,
+              transition: { duration: 0.6, delay: 1.8, ease: "backInOut" },
+            }}
+            viewport={{ once: true }}
+          ></motion.div>
 
           {/* Main content */}
-          <div className="min-h-[325px] flex flex-col items-center justify-center z-50 relative">
-            <img
+          <motion.div
+            className="min-h-[325px] flex flex-col items-center justify-center z-50 relative"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              transition: { duration: 0.5, delay: 0.75 },
+            }}
+            viewport={{ once: true }}
+          >
+            <motion.img
               className="w-[175px] h-[175px] bg-[#353535] object-scale-down rounded-full"
               src={headshot.src}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                transition: { duration: 0.5 },
+              }}
+              viewport={{ once: true }}
             />
             <p className="text-center py-4 font-medium">Hey, Thats Me! 👋</p>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

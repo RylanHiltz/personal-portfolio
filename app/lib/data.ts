@@ -54,7 +54,7 @@ export const projectsData = [
       "This project is a showcase of my most recent work, skills, and experiences. This single page website was fully built using Next.js App Router, Typescript, and Tailwind CSS. I focused on creating a cohesive site in my favourite color, featuring a fully responsive design and complex animations using Framer Motion.",
     tags: ["Next.js", "TypeScript", "Tailwind", "Framer-Motion"],
     date: "2024",
-    projectURL: "",
+    projectURL: "https://rylanhiltz.codes/",
     githubURL: "https://github.com/RylanHiltz/personal-portfolio",
     img: PortfolioImg,
     alt: "",

@@ -124,6 +124,22 @@ function ExperienceCard({ date, title, description }: experienceProps) {
 type skillsProps = (typeof skillsData)[number];
 
 function SkillsCard({ title, languages, skills }: skillsProps) {
+  // TODO: figure out if these even work or if they would look good
+  const progressVariants = {
+    initial: {
+      scaleX: 0,
+      scaleY: 1,
+      borderRadius: "9999px",
+      x: 1.6,
+    },
+    animate: { scaleX: 1, originX: 0, x: 0 },
+    transition: {
+      delay: 0.4,
+      ease: "easeOut",
+      duration: 0.4,
+    },
+  };
+
   return (
     <div className="h-full flex flex-col max-920px:flex-row max-920px:gap-[3em] max-skills-mobile:flex-col max-skills-mobile:gap-0">
       <div>
