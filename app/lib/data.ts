@@ -1,5 +1,6 @@
-import AestheticonsImg from "../images/aestheticonsimg.png";
+import AestheticonsImg from "../images/aestheticonsimg.png"
 import PortfolioImg from "../images/portfolioImg.png"
+import SheetwiseImg from "../images/sheetwiseImg.png"
 
 export const links = [
   {
@@ -33,7 +34,7 @@ export const projectsData = [
     date: "2024",
     projectURL: "",
     githubURL: "",
-    img: AestheticonsImg,
+    img: SheetwiseImg,
     alt: "",
   },
   {
