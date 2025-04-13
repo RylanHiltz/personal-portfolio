@@ -46,12 +46,6 @@ export default function Contact() {
           </h2>
           {/* Email & Phone */}
           <div>
-            <div className="flex gap-4 items-center">
-              <MdPhone size={22} />
-              <a className="underline font-light" href="tel:+17057161324">
-                1+ 705-716-1324
-              </a>
-            </div>
             <div className="mt-4 flex gap-4 items-center">
               <MdEmail size={22} />
               <a
